@@ -1,0 +1,44 @@
+<div id="product" [formGroup]="productFrmGrp">
+   			<h2>Product - Section 2</h2>
+   			<div class="row">
+	   			<div class="col-md-6 pull-left">
+		   			<div class="form-group"><label for="productBrandName" class="required"><span class="field-name">Primary Product Brand and Name (as it appears on the product label) </span> <strong class="required">(required)</strong></label>
+		    			<textarea class="form-control" id="productBrandName" name="productBrandName" formControlName="productBrandName" required 
+		    			          placeholder="Primary Product Brand and Name" rows="1" cols="60" maxlength="100" >
+		    			</textarea>
+		    		
+		    		</div>		   			
+		    	</div>
+		    	<div class="col-md-6 pull-right">
+		   			 <div class="form-group"><label for="industryProductIdentifier"><span class="field-name">Notifier's Reference</span></label>
+		    			 <textarea class="form-control" id="industryProductIdentifier" name="industryProductIdentifier" formControlName="industryProductIdentifier" 
+		    			           placeholder="Notifier's Reference" maxlength="100" >
+		    			 </textarea>
+		    			
+		    		</div>
+		    	</div>
+		    </div>
+		      <div class="row">  
+ 				<div class="col-md-6 pull-left">  
+                   	<div class="form-group"><label for="retailSaleBeginDate"><span class="field-name">Date of first sale in Canada, actual or predicted </span><span class="datepicker-format">(<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>  
+                   		<input class="form-control" id="retailSaleBeginDate" name="retailSaleBeginDate" formControlName="retailSaleBeginDate" hcform-datepicker type="date" data-rule-dateISO="true" onkeypress="return noEnter(event)"/>  
+ 					</div>  
+             	</div>  
+ 			</div>
+       			<h3>Other Product Names</h3>
+			<div>
+			    <p>Other product names include shade/colour, scent/fragrance and aroma/flavour variations where the base formulation is the same or alternate language translations. Enter one product name per line. Click on the “Add Another Name” button to add each additional product name. 
+			    Click on the “Remove Name” button to remove a product name. </p>
+       <app-other-products  [group]="productFrmGrp.controls.otherProducts"></app-other-products>
+<div class="row">
+	   			<div class="col-sm-10"> 
+	    			<div class="form-group"><label for="description"><span class="field-name">Product Description</span></label><br>
+		   				<div id="characterRemaining"><small>Characters remaining: <span></span></small></div>
+		    			<textarea class="form-control"  id="description" name="description" 
+		    				        formControlName="description" ng-trim="false" placeholder="Product Description"
+		    				         rows="5" cols="150" maxlength="1500" >
+		    			</textarea>		   			   
+		   			</div>
+		   		 </div>
+		   	</div>		
+ </div>

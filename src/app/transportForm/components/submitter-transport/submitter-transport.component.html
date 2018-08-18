@@ -1,0 +1,15 @@
+ <div [formGroup]="submitterTransportFrmGrp">
+         	<h2>Who is reporting</h2>
+<app-person-contact [group]="submitterTransportFrmGrp" [sectionName]=sectionName [index]=index [formName]=formName ></app-person-contact>
+<div class="row"> 
+  <div class="col-md-6 pull-left"> 	
+					<div class="form-group"><label for="titleWithinOrganization{{sectionName}}{{formName}}{{index}}"><span class="field-name">Position</span></label>
+            <textarea class="form-control" id="titleWithinOrganization{{sectionName}}{{formName}}{{index}}" name="titleWithinOrganization{{sectionName}}{{formName}}{{index}}" formControlName="titleWithinOrganization" placeholder="Position" rows="1" cols="60" maxlength="50"></textarea>
+          </div>
+  </div>
+</div>
+      <app-claim-of-confidentiality [group]="submitterTransportFrmGrp"></app-claim-of-confidentiality>
+        <app-privacy-notice [group]="submitterTransportFrmGrp"></app-privacy-notice>
+
+				</div>
+               

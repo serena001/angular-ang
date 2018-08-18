@@ -1,0 +1,9 @@
+{
+   "reportType" : "Type de rapport",
+ "productType" : "Type de produit",
+  "caseNumber" : "No de cas",
+ "required"  : "obligatoire" ,
+"selectProductType"  :  "Sélectionnez un type de produit",
+ "report"  :  "Rapport",
+"selectReportType"  :  "Sélectionnez un type de rapport"
+} 

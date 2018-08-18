@@ -1,0 +1,86 @@
+ <div [formGroup]="contactCommonFrmGrp"> 
+		<div class="row">          
+            <div class="col-md-6 pull-left">
+                <div class="form-group"><label for="address{{sectionName}}{{formName}}{{index}}"><span class="field-name">Address (number and street)</span></label>
+                     <textarea class="form-control" id="address{{sectionName}}{{formName}}{{index}}" name="address{{sectionName}}{{formName}}{{index}}" formControlName="address" placeholder="Address" rows="1" cols="60" maxlength="100"></textarea>
+               </div>
+            </div>
+            <div class="col-md-6 pull-right">
+                <div class="form-group"><label for="city{{sectionName}}{{formName}}{{index}}"><span class="field-name">City</span></label>
+                     <textarea class="form-control" id="city{{sectionName}}{{formName}}{{index}}" name="city{{sectionName}}{{formName}}{{index}}" formControlName="city" placeholder="City" rows="1" cols="60" maxlength="50"></textarea>                    
+                </div>
+            </div>
+		</div>
+        <div class="row">
+            <div class="col-md-6 pull-left">
+                <div class="form-group"><label for="postalCode{{sectionName}}{{formName}}{{index}}"><span class="field-name">Postal Code</span></label>
+                     <input class="form-control" type="text" id="postalCode{{sectionName}}{{formName}}{{index}}" name="postalCode{{sectionName}}{{formName}}{{index}}" formControlName="postalCode" placeholder="Postal Code" maxlength="10" onkeypress="return noEnter(event)"/>
+                </div>
+            </div>
+        </div>
+     <div class="row">
+            <div class="col-md-6 pull-left">
+                <div class="form-group"><label for="lstCountry{{sectionName}}{{formName}}{{index}}"><span class="field-name">Country</span></label>    
+					<select class="form-control" id="lstCountry{{sectionName}}{{formName}}{{index}}" formControlName="country" #countryVal  [appSetCountryProvince]="countryVal" (change)="setCountry($event,countryVal.value)">
+						<option value=""  >Select a country</option>
+                        <option *ngFor="let country of lstCountries" [value]="country.id"  >{{country.name}}</option>
+					</select>          
+                </div>
+            </div>
+            <div class="col-md-6 pull-right">
+                <div class="form-group">
+                         <div [hidden]="showOther"><label for="otherCountry{{sectionName}}{{formName}}{{index}}"><span class="field-name">Other Country</span></label>                            
+                              <textarea class="form-control" id="otherCountry{{sectionName}}{{formName}}{{index}}" name="otherCountry{{sectionName}}{{formName}}{{index}}" formControlName="country" 
+                                          placeholder="Country" rows="1" cols="60" maxlength="50"  ></textarea>
+                         </div>
+                </div>
+            </div>            
+        </div> 
+        <div class="row">
+            <div class="col-md-6 pull-left">
+                 <div class="form-group">
+                    <div [hidden]="showProvince"><label for="lstProvince{{sectionName}}{{formName}}{{index}}"><span class="field-name">Province</span></label>
+						<select class="form-control" id="lstProvince{{sectionName}}{{formName}}{{index}}" formControlName="provinceRegion">
+                                <option value=""  >Select a province</option>
+								<option *ngFor="let province of lstProvinces" [value]="province.id">{{province.name}}</option>
+						</select>                  
+                    </div>
+                    <div  [hidden]="showState"><label for="lstState{{sectionName}}{{formName}}{{index}}"><span class="field-name">State</span></label>
+						<select class="form-control" id="lstState{{sectionName}}{{formName}}{{index}}" formControlName="provinceRegion" >
+                                <option value=""  >Select a state</option>
+								<option *ngFor="let state of lstStates" [value]="state.id">{{state.name}}</option>
+						</select>
+                    </div>
+                    <div  [hidden]="showOther"><label for="region{{sectionName}}{{formName}}{{index}}"><span class="field-name">Region</span></label>
+                         <textarea class="form-control" id="region{{sectionName}}{{formName}}{{index}}" name="region{{sectionName}}{{formName}}{{index}}" formControlName="provinceRegion"                                   
+                                  placeholder="Region" rows="1" cols="60" maxlength="50"></textarea>
+                    </div>                    
+               </div>              
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 pull-left">
+                <div class="form-group"><label for="email{{sectionName}}{{formName}}{{index}}" class="required "><span class="field-name">Email</span><br> <strong class="required">(Email OR Telephone is required)</strong>, both are preferred</label>
+                        <input class="form-control required_group emailValidation" type="text" id="email{{sectionName}}{{formName}}{{index}}" name="email{{sectionName}}{{formName}}{{index}}" formControlName="email" placeholder="email@example.com" maxlength="100" size="60" onkeypress="return noEnter(event)"/>
+                </div>
+            </div>
+            <div class="col-md-6 pull-right">
+                <div class="form-group"><label for="telephoneNumber{{sectionName}}{{formName}}{{index}}" class="required"><span class="field-name">Telephone (including area code)</span><br> <strong class="required">(Telephone OR Email is required)</strong>, both are preferred</label>
+                        <input class="form-control  required_group" type="tel" id="telephoneNumber{{sectionName}}{{formName}}{{index}}" name="telephoneNumber{{sectionName}}{{formName}}{{index}}" formControlName="telephoneNumber" placeholder="Telephone" maxlength="50" size="60" onkeypress="return noEnter(event)"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 pull-left"> 
+                <div class="form-group"><label for="faxNumber{{sectionName}}{{formName}}{{index}}"><span class="field-name">Fax (including area code)</span> </label>
+                        <input class="form-control" type="tel" id="faxNumber{{sectionName}}{{formName}}{{index}}" name="faxNumber{{sectionName}}{{formName}}{{index}}" formControlName="faxNumber" placeholder="Fax Number" maxlength="50" size="60" onkeypress="return noEnter(event)"/>
+                </div>
+            </div>
+        </div>
+      
+ 
+
+
+				</div>
+               
+

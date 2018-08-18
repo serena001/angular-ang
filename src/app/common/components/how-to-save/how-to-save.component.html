@@ -1,0 +1,23 @@
+<div>
+  <h2>{{'titleHowToSave' | translate:lang }}</h2>
+    <div>
+      <p>{{'paragraphHowToSave'  | translate:lang }}</p>
+      <ul>
+        <li>{{'paragraphHowToSaveBullet1'  | translate:lang }}</li>	
+        <li>{{'paragraphHowToSaveBullet2'  | translate:lang }}</li>	
+      </ul>
+    </div>
+  <div class="panel panel-primary">
+                      <div class="panel-heading"><h3 class="panel-title">{{'panelTitleHowToSave'  | translate:lang }}</h3></div>
+                      <div class="panel-body">
+              <div>
+                <ol>
+                  <li>{{'howToSaveBullet1' | translate:lang }} <a  id="formDataLink" download="blah" [href]=outputPath (click)="downloadFileFirefox()">{{'howToSaveBullet1Cont' | translate:lang }}</a></li>
+                  <li>{{'howToSaveBullet2' | translate:lang }}<a  id="formDataLink" download="blah" [href]=outputPath (click)="downloadFileFirefox()">{{'howToSaveBullet2Cont' | translate:lang }}</a></li>
+                  <li>{{'howToSaveBullet3' | translate:lang }}</li>
+                  <li>{{'howToSaveBullet4' | translate:lang }}</li>
+                </ol>
+              </div>
+          </div>
+  </div>
+</div>

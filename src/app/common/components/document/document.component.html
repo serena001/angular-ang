@@ -1,0 +1,31 @@
+  <div   [formGroup]="documentFrmGrp" id="document">
+    <div class="row">
+          <div class="col-md-6 pull-left"> 
+              <div class="form-group">                      
+                          <label for="fileName_{{index}}"><span class="field-name"></span>{{'docFilename' | translate:lang }}</label><br>
+                        <a  id="fileName_{{index}}" download="blah" [href]=outputPath (click)="downloadFileFirefox()">{{fileName}}</a>
+                        
+              </div>
+          </div>
+    </div>    
+    <div class="row">
+       <div class="col-md-6 pull-left">
+           <div class="form-group"><label for="lkpInfoResourceTypeId_{{index}}" class="required"><span class="field-name">{{'docType' | translate:lang }}</span> <strong class="required">({{'docRequired' | translate:lang }})</strong></label> 
+ 	                <select class="form-control" id="lkpInfoResourceTypeId_{{index}}" name="lkpInfoResourceTypeId_{{index}}" formControlName="lkpInfoResourceTypeId">
+                                <option value="">{{'docTypeLst' | translate:lang }}</option>
+                                <option *ngFor="let lkpInfoResourceTypeId of  lkpInfoResourceTypeIds" [value]="lkpInfoResourceTypeId.id">{{lkpInfoResourceTypeId.name}}</option>
+                        </select> 
+           </div> 
+       </div>
+    </div>
+     <div class="row">
+       <div class="form-group">
+          <div class="col-md-6 pull-left">          
+                <label for="infoResourceTitle_{{index}}" class="required"><span class="field-name">{{'docTitle' | translate:lang }}</span> <strong class="required">({{'docRequired' | translate:lang }})</strong></label>
+                <textarea class="form-control" id="infoResourceTitle_{{index}}" name="infoResourceTitle_{{index}}" formControlName="infoResourceTitle" placeholder="title" rows="1" cols="20" maxlength="255" required></textarea>
+          </div>                   
+      </div>
+    </div>
+							
+    </div>
+  

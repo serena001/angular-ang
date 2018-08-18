@@ -1,0 +1,44 @@
+
+ <div [formGroup]="submissionFormGrp">
+ <div class="report">
+            <div class="row">
+                <div class="col-md-6 pull-left">
+                    <div class="form-group"><label for="lkpCaseTypeId" class="required"><span class="field-name">Food Type</span> <strong class="required">(required)</strong></label>
+                          <select class="form-control" id="lkpCaseTypeId" name="lkpCaseTypeId" formControlName="lkpCaseTypeId"  #formTypeVal  (change)="setFoodType($event,formTypeVal.value)">
+                                <option value="">Select Food Type</option>
+                                <option *ngFor="let lstFoodType of  lstFoodTypes" [value]="lstFoodType.id">{{lstFoodType.name}}</option>
+                        </select>                           
+                    </div>
+                </div>
+                <div class="col-md-6 pull-right">
+                    <div class="form-group">
+                       <label for="lkpCaseSubtypeId" class="required"><span class="field-name">Food Sub-Type</span> <strong class="required">(required)</strong></label>
+                        <div  [hidden]="showNoValue">
+                            <select class="form-control" id="lkpCaseSubtypeId" name="lkpCaseSubtypeId" formControlName="lkpCaseSubtypeId" >
+                                <option value="">Select Food Type</option>
+                            </select>
+                        </div>
+                        <div  [hidden]="showFdSubTypesAdditive">
+                            <select class="form-control" id="lkpCaseSubtypeId" name="lkpCaseSubtypeId" formControlName="lkpCaseSubtypeId" >
+                                <option value="">Select Food Type</option>
+                                <option *ngFor="let fdSubTypesAdditive of  lstFdSubTypesAdditive" [value]="fdSubTypesAdditive.id">{{fdSubTypesAdditive.name}}</option>
+                            </select>
+                        </div>
+                        <div  [hidden]="showFdSubTypesFormula"> 
+                             <select class="form-control" id="lkpCaseSubtypeId" name="lkpCaseSubtypeId" formControlName="lkpCaseSubtypeId" >
+                                <option value="">Select Food Type</option>
+                                <option *ngFor="let fdSubTypesFormula of  lstFdSubTypesFormula" [value]="fdSubTypesFormula.id">{{fdSubTypesFormula.name}}</option>
+                            </select>
+                        </div>
+                        <div  [hidden]="showFdSubTypesNovelFd"> 
+                             <select class="form-control" id="lkpCaseSubtypeId" name="lkpCaseSubtypeId" formControlName="lkpCaseSubtypeId" >
+                                <option value="">Select Food Type</option>
+                                <option *ngFor="let fdSubTypesNovelFd of  lstFdSubTypesNovelFd" [value]="fdSubTypesNovelFd.id">{{fdSubTypesNovelFd.name}}</option>
+                            </select> 
+                        </div>                           
+                    </div> 
+                </div>                   
+                </div>
+            </div>           
+    </div>
+    

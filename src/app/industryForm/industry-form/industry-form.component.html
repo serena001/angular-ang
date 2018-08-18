@@ -1,0 +1,48 @@
+<h1 property="name" id="wb-cont">Consumer Product Incident Report - Form for Industry</h1>
+  <div class="wb-frmvld">    
+    <form role="form"  name="hcform" id="hcform" [formGroup]="myForm" (ngSubmit)="save(myForm)" action="#" >
+		<div formGroupName="report">
+			<app-report-industry [group]="myForm.controls.report"></app-report-industry>
+		</div>	
+		<div formGroupName="submitter">
+			<app-submitter-industry [group]="myForm.controls.submitter" [index]=index [formName]=formName [sectionName]=sectionNameSubmitter></app-submitter-industry>
+		</div>
+		<div formGroupName="incident">
+				<app-incident [group]="myForm.controls.incident"></app-incident>
+		</div>
+		<div formGroupName="product">
+		<app-product [group]="myForm.controls.product"></app-product>
+		</div>		
+		<div formGroupName="productLabel">
+		<app-product-label [group]="myForm.controls.productLabel" [index]=index [formName]=formName [sectionName]=sectionNameProductLabel></app-product-label>
+		</div>		
+		<div formGroupName="whereGotPrdct">
+			<app-where-got-prdct-industry [group]="myForm.controls.whereGotPrdct" [index]=index [formName]=formName  [sectionName]=sectionNameWhereGotPrdct></app-where-got-prdct-industry>
+		</div>
+     <div formGroupName="measure">
+			<app-measure [group]="myForm.controls.measure"></app-measure>
+		</div>
+		<app-upload-attach [form]="myForm"></app-upload-attach>
+		<div formGroupName="documents">
+			<app-documents [group]="myForm.controls.documents"></app-documents>
+		</div>	
+		<div formGroupName="admin">
+			<app-admin-industry [group]="myForm.controls.admin"></app-admin-industry>
+		</div>
+		<div formGroupName="submitForm">
+			<app-submit-form [group]="myForm.controls.submitForm"></app-submit-form>
+		</div>
+		<div class="row">
+			<div class="form-group">
+					<button type="submit" class="btn btn-lg btn-primary pull-left">Proceed to Submit</button>
+			</div>
+		</div>
+		<app-how-to-save [form]="myForm"></app-how-to-save>
+		<app-how-to-import [form]="myForm"></app-how-to-import>
+		<app-message-dialogue></app-message-dialogue>
+	</form>
+</div>
+
+
+
+

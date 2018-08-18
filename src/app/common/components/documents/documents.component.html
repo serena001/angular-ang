@@ -1,0 +1,17 @@
+<div [formGroup]="documentsFrmGrp">
+		<div formGroupName="document">	
+
+			<!--<div *ngFor="let document of documentsFrmGrp.controls.document.controls; let i=index">-->
+				<div *ngFor="let document of getDocuments(documentsFrmGrp); let i=index">
+					<div [formGroupName]="i">
+						<div class="panel panel-primary">
+							<div class="panel-heading"><h3 class="panel-title">{{'docsTitle' | translate:lang }} {{i+1}}</h3></div>
+							<div class="panel-body">
+									<app-document [group]="documentsFrmGrp.controls.document.controls[i]" [index]=i></app-document>
+									<button type="button" class="btn btn-lg btn-info pull-right"  (click)="removeDocument(i)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>{{'removeDocBttn' | translate:lang }}</button>
+							</div>
+						</div>
+					</div> 
+				</div>
+		</div>
+		</div>

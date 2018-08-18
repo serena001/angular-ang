@@ -1,0 +1,21 @@
+    <div  [formGroup]="incidentFrmGrp">
+         <h2>Incident</h2>
+         <app-affected-persons [group]="incidentFrmGrp.controls.affectedPersons"></app-affected-persons>
+              <br>
+            <div class="row">
+                <div class="col-md-6 pull-left">
+                    <div class="form-group"><label for="numberAffectedPersons"><span class="field-name">Number of people affected (only accepts a number between 0 and 999)</span></label>
+                        <input class="form-control numAffectedPers_validation_CPS" type="text" id="numberAffectedPersons" name="numberAffectedPersons" formControlName="numberAffectedPersons" placeholder="Select Number" onkeypress="return noEnter(event)"/>
+                    </div>
+                </div>
+             </div>
+             <div class="row">
+                 <div class="col-sm-10">
+                    <div class="form-group"><label for="incidentDescription" class="required"><span class="field-name">Describe the Incident</span> <strong class="required">(required)</strong></label><br>
+                    	<small>Characters remaining: <span></span></small>
+                    	<textarea class="form-control" id="incidentDescription" name="incidentDescription" formControlName="incidentDescription" ng-trim="false" required placeholder="Describe the Incident" aria-multiline="true" rows="5" cols="100" maxlength="2000"></textarea>
+               		</div>
+               	</div>
+            </div>
+    </div>
+

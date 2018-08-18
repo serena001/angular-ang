@@ -1,0 +1,22 @@
+
+<div [formGroup]="otherProductsFrmGrp">
+		<div formGroupName="otherProduct">	
+			<div *ngFor="let otherProduct of getOtherProducts(otherProductsFrmGrp); let i=index">
+					<div [formGroupName]="i">
+						<div class="panel panel-primary">
+							<div class="panel-heading"><h3 class="panel-title">OTHER PRODUCT {{i+1}}</h3></div>
+							<div class="panel-body">
+									<app-other-product [group]="otherProductsFrmGrp.controls.otherProduct.controls[i]" [index]=i></app-other-product>
+									<button type="button" class="btn btn-lg btn-info pull-right"  (click)="removeOtherProduct(i)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> remove other product</button>
+							</div>
+						</div>
+					</div> 
+				</div>
+		</div>
+     <div class="row">
+                <div class="form-group">
+                    <button type="button" class="btn btn-lg btn-primary pull-right" (click)="addOtherProduct()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> add other product</button>
+                </div>
+            </div>
+		</div>
+

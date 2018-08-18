@@ -1,0 +1,30 @@
+<h1 property="name" id="wb-cont">Form for Submitting Additional Documents to Health Canada</h1>
+  <div class="wb-frmvld">    
+    <form role="form"  name="hcform" id="hcform" [formGroup]="myForm" (ngSubmit)="save(myForm)" action="#" >
+		<div formGroupName="report">
+			<app-report-transport [group]="myForm.controls.report"></app-report-transport>
+		</div>	
+		<div formGroupName="submitter">
+			<app-submitter-transport [group]="myForm.controls.submitter" [sectionName]=sectionNameSubmitter [index]=index [formName]=formName></app-submitter-transport>
+		</div>	
+		<app-upload-attach [form]="myForm"></app-upload-attach>
+		<div formGroupName="documents">
+			<app-documents [group]="myForm.controls.documents"></app-documents>
+		</div>	
+		<div formGroupName="submitForm">
+			<app-submit-form [group]="myForm.controls.submitForm"></app-submit-form>
+		</div>
+		<div class="row">
+			<div class="form-group">
+					<button type="submit" class="btn btn-lg btn-primary pull-left">Proceed to Submit</button>
+			</div>
+		</div>
+		<app-how-to-save [form]="myForm"></app-how-to-save>
+		<app-how-to-import [form]="myForm"></app-how-to-import>
+		<app-message-dialogue></app-message-dialogue>
+	</form>
+</div>
+
+
+
+

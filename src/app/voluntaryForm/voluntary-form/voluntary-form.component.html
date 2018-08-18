@@ -1,0 +1,42 @@
+<h1 property="name" id="wb-cont">Health Product Complaint Form (FRM-0317)</h1>
+  <div class="wb-frmvld">    
+    <form role="form"  name="hcform" id="hcform" [formGroup]="myForm" (ngSubmit)="save(myForm)" action="#" >
+			<!--<div formGroupName="report">
+			<app-report-voluntary [group]="myForm.controls.report"></app-report-voluntary>
+		</div>
+		<div formGroupName="submitter">
+			<app-submitter [group]="myForm.controls.submitter" [index]=index [formName]=formName [sectionName]=sectionNameSubmitter></app-submitter>
+		</div>-->
+
+	<!--	<div formGroupName="incident">
+				<app-incident-voluntary [group]="myForm.controls.incident"></app-incident-voluntary>
+		</div>-->
+		
+  	<div formGroupName="devices">			
+			<app-products-voluntary [group]="myForm.controls.devices" [sectionName]=sectionNameDevices [formName]=formName></app-products-voluntary>
+		</div>
+		<app-upload-attach [form]="myForm"></app-upload-attach>
+		<div formGroupName="documents">
+			<app-documents [group]="myForm.controls.documents"></app-documents>
+		</div>	
+		<div formGroupName="admin">
+			<app-admin-industry [group]="myForm.controls.admin"></app-admin-industry>
+		</div>
+		<div formGroupName="submitForm">
+			<app-submit-form [group]="myForm.controls.submitForm"></app-submit-form>
+		</div>
+		<div class="row">
+			<div class="form-group">
+					<button type="submit" class="btn btn-lg btn-primary pull-left">Proceed to Submit</button>
+			</div>
+		</div>
+		<app-how-to-save [form]="myForm"></app-how-to-save>
+		<app-how-to-import [form]="myForm"></app-how-to-import>
+		<app-message-dialogue></app-message-dialogue>
+	</form>
+</div>
+
+
+
+
+

@@ -1,0 +1,48 @@
+<div>
+  <h2>{{'titleDocuments' | translate:lang }}</h2>
+  <div class="panel panel-primary">
+                      <div class="panel-heading"><h3 class="panel-title">{{'titlePanel' | translate:lang }}</h3></div>
+                      <div class="panel-body">
+                
+                <div class="row">
+                  <div class="col-md-6 pull-left">
+                    <h4>{{'attachDoc' | translate:lang }}</h4>
+                    <ul>
+                      <li>{{'attachDocBullet1' | translate:lang }}</li>
+                      <li>{{'attachDocBullet2' | translate:lang }}</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 pull-right">
+                    <h4>{{'docSize' | translate:lang }}</h4>
+                    <ul>
+                      <li>{{'docSizeBullet1' | translate:lang }}</li>
+                    </ul>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-6 pull-left">
+                    <h4>{{'docAccept' | translate:lang }}</h4>
+                    <ul>
+                      <li>{{'docAcceptBullet1' | translate:lang }}</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 pull-right">
+                    <h4>{{'docRemove' | translate:lang }}</h4>
+                    <ul>
+                      <li>{{'docRemoveBullet1' | translate:lang }} </li>
+                      <li>{{'docRemoveBullet2' | translate:lang }}</li>
+                    </ul>
+                </div>
+              </div>
+              			<app-success-dialogue [hidden]=showSuccess [successMessage]=successMessage></app-success-dialogue>
+			              <app-error-dialogue  [hidden]=showError [errorMessage]=errorMessage></app-error-dialogue>
+               <div class="row">
+                  <div class="col-md-6 pull-left">
+                  <label for="file"><span class="field-name">{{'uploadButton' | translate:lang }}</span></label>
+                  <input type="file" name="file" multiple (change)="uploadFiles($event)" />
+                  <!-- <input #showFileNames />	-->
+                  </div>
+                </div>
+          </div>
+  </div>
+</div>

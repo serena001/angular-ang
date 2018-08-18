@@ -1,0 +1,59 @@
+<h1 property="name" id="wb-cont">Application for the Approval of Certain Food Products, Prior to Market Entry</h1>
+  <div class="wb-frmvld">    
+    <form role="form"  name="hcform" id="hcform" [formGroup]="myForm" (ngSubmit)="save(myForm)" action="#" >
+		<h2>Type of Food Product  </h2>
+        <p><small>Choose a Food Type first, then a Food Sub-Type. If you do not know the food sub-type, please choose to the best of your knowledge.</small></p>
+
+		<div formGroupName="submission">
+			<app-submission [group]="myForm.controls.submission"></app-submission>
+		</div>
+
+			<h2>Primary Contact</h2>
+			<p><small>All correspondence will be sent to the primary contact.</small></p>
+
+			<div formGroupName="submitter">
+				<app-submitter-food [group]="myForm.controls.submitter" [sectionName]=sectionNameSubmitter [index]=index [formName]=formName></app-submitter-food>
+			</div>
+
+
+			<h2>Petitioner</h2>
+			<p><small>As the primary contact is not the petitioner, enter the petitioner information</small></p>   
+
+			<div formGroupName="petitioner">
+				<app-submitter-food [group]="myForm.controls.petitioner" [sectionName]=sectionNamePetitioner [index]=index [formName]=formName></app-submitter-food>
+			</div>
+
+			<h2>Contact (if different from primary contact or petitioner)</h2>
+        <p><small>Use one sub-form per contact. If same as Section 2, please leave blank. Click on the "Add Contact" button to add each additional contact. Click on the "Remove Contact" button to remove a contact. One sub-form is already provided.</small></p>
+
+
+		<div formGroupName="contacts">
+			<app-contacts [group]="myForm.controls.contacts" [sectionName]=sectionNameContacts [formName]=formName></app-contacts>
+		</div>
+        <h2>Substance or Product</h2>
+ 
+		<div formGroupName="product">
+			<app-product-food [group]="myForm.controls.product"></app-product-food>
+		</div>
+
+ 		<app-upload-attach [form]="myForm"></app-upload-attach>
+		<div formGroupName="documents">
+			<app-documents [group]="myForm.controls.documents"></app-documents>
+		</div>	
+		<div formGroupName="submitForm">
+			<app-submit-form [group]="myForm.controls.submitForm"></app-submit-form>
+		</div>
+		<div class="row">
+			<div class="form-group">
+					<button type="submit" class="btn btn-lg btn-primary pull-left">Proceed to Submit</button>
+			</div>
+		</div>
+		<app-how-to-save [form]="myForm"></app-how-to-save>
+		<app-how-to-import [form]="myForm"></app-how-to-import>
+		<app-message-dialogue></app-message-dialogue>
+	</form>
+</div>
+
+
+
+

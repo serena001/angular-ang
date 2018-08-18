@@ -1,0 +1,28 @@
+ <div [formGroup]="businessContactFrmGrp">
+    <div class="row">            
+              <div class="col-md-6 pull-left">
+                <div class="form-group"><label for="personName{{sectionName}}{{formName}}{{index}}" ><span class="field-name">Name (first name and last name)</span></label>
+                     <textarea class="form-control" id="personName{{sectionName}}{{formName}}{{index}}" name="personName{{sectionName}}{{formName}}{{index}}" formControlName="personName" placeholder="Name" rows="1" cols="60" maxlength="50"></textarea>
+                </div>
+            </div> 
+             <div class="col-md-6 pull-right"> 
+                  <div class="form-group"><label for="organizationName{{sectionName}}{{formName}}{{index}}"><span class="field-name">Business Name (full legal name - no abbreviations)</span></label>                       
+                       <textarea class="form-control" id="organizationName{{sectionName}}{{formName}}{{index}}" name="organizationName{{sectionName}}{{formName}}{{index}}" formControlName="organizationName" placeholder="Business Name" rows="1" cols="60" maxlength="60"></textarea>                       
+                 </div> 
+             </div> 
+    </div>
+    <div class="row">
+      <div class="col-md-6 pull-left"> 	
+					<div class="form-group"><label for="titleWithinOrganization{{sectionName}}{{formName}}{{index}}"><span class="field-name">Position</span></label>
+            <textarea class="form-control" id="titleWithinOrganization{{sectionName}}{{formName}}{{index}}" name="titleWithinOrganization{{sectionName}}{{formName}}{{index}}" formControlName="titleWithinOrganization" placeholder="Position" rows="1" cols="60" maxlength="50"></textarea>
+          </div>
+		    </div>
+        <div class="col-md-6 pull-right"> 
+          <div class="form-group"><label for="website{{sectionName}}{{formName}}{{index}}"><span class="field-name">Website</span></label> 
+            <textarea class="form-control" id="website{{sectionName}}{{formName}}{{index}}" name="website{{sectionName}}{{formName}}{{index}}" formControlName="website" placeholder="Website" rows="1" cols="60" maxlength="50"></textarea>                            
+          </div> 
+        </div> 
+    </div>
+  <app-contact-common [group]="businessContactFrmGrp" [sectionName]=sectionName [index]=index [formName]=formName ></app-contact-common>
+</div>
+               

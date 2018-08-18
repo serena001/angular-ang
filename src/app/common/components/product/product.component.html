@@ -1,0 +1,41 @@
+  <div  [formGroup]="productFrmGrp">
+            <h2>Product </h2>
+            <p><small>Please include any of the information below that you can find on the product or packaging</small></p>
+            <app-product-common [group]="productFrmGrp"></app-product-common>
+            <div class="row">
+                <div class="col-md-6 pull-left">
+                    <div class="form-group"><label for="product_modelNumber"><span class="field-name">Model Number</span></label>                         
+                         <input class="form-control" type="text" id="product_modelNumber" name="product_modelNumber" formControlName="modelNumber" placeholder="Model Number" maxlength="50" size="60" onkeypress="return noEnter(event)"/>
+                    </div>
+                </div>
+                <div class="col-md-6 pull-right">
+                    <div class="form-group"><label for="product_serialNumber"><span class="field-name">Serial Numbers</span></label>                        
+                         <input class="form-control" type="text" id="product_serialNumber" name="product_serialNumber" formControlName="serialNumber" placeholder="Serial Numbers" maxlength="45" size="60" onkeypress="return noEnter(event)"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 pull-left">
+                    <div class="form-group"><label for="product_dateCode"><span class="field-name">Date Codes</span></label>                         
+                          <input class="form-control" type="text" id="product_dateCode" name="product_dateCode" formControlName="dateCode" placeholder="Date Codes" maxlength="50" size="60" onkeypress="return noEnter(event)"/>
+                    </div>
+                </div>
+                <div class="col-md-6 pull-right">
+                    <div class="form-group"><label for="product_upc"><span class="field-name">Universal Product Code / UPC / Bar Code</span></label>                         
+                         <input class="form-control" type="text" id="product_upc" name="product_upc" formControlName="upc" placeholder="UPC / Bar Code" maxlength="20" onkeypress="return noEnter(event)"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 pull-left">
+                    <div class="form-group"><label for="product_certification"><span class="field-name">Certification / Standards (e.g. CSA, ULC stickers)</span></label>
+                         <input class="form-control" type="text" id="product_certification" name="product_certification" formControlName="certification" placeholder="Certification / Standards" maxlength="50" size="60" onkeypress="return noEnter(event)"/>
+                    </div>
+                </div>
+                <div class="col-md-6 pull-right">
+                    <div class="form-group"><label for="product_batchNumber"><span class="field-name">Batch Number</span></label>
+                         <input class="form-control" type="text" id="product_batchNumber" name="product_batchNumber" formControlName="batchNumber" placeholder="Batch Number" maxlength="45" size="60" onkeypress="return noEnter(event)"/>
+                    </div>
+                </div>
+            </div>                    
+   </div>

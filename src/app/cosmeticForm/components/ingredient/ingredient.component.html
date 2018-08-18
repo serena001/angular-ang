@@ -1,0 +1,61 @@
+ 	<div id="ingredient" [formGroup]="ingredientsFrmGrp">   		
+
+			   		<div class="row">
+			   			<div class="col-md-9 pull-left"> 
+					   		<div class="form-group"><label for="ingredientName{{index}}" class="required"><span class="field-name">Name</span> <strong class="required">(required)</strong></label>
+ 				    				<textarea class="form-control" id="ingredientName{{index}}" name="ingredientName{{index}}" #ingredient formControlName="ingredientName" required placeholder="Ingredient Name" rows="1" cols="100" maxlength="2000">
+					    			</textarea>
+				    		</div>				    	
+				    	</div>
+				    	<div class="col-md-3 pull-right"> 	
+                <div><button type="button" class="btn btn-lg btn-primary pull-right" >Search Ingredient</button></div>
+		            	</div>
+            	 	</div>
+            	 	<div class="row">
+				    	<div class="col-md-6 pull-left">
+								<div class="form-group"><label for="mayContain{{index}}"><span class="field-name">May Contain</span></label>
+										<input type="checkbox" id="mayContain{{index}}" name="mayContain{{index}}" 
+										formControlName="mayContain" title="May Contain: Ingredient is variable"/>
+								</div>								  		
+						</div>
+					</div>
+            	 <!--	<div class="row">
+				   		<div class="col-md-6 pull-left">  
+							 <div class="form-group"><label for="range{{index}}"><span class="field-name">Range Code</span></label>
+ 	                <select class="form-control" id="range{{index}}" name="range{{index}}" formControlName="range"
+                   title="Range Code: If you select a range code from the list, the lower and upper limits will be automatically populated">
+                                <option value="">Select Range Code</option>
+                                <option *ngFor="let range of  lstRange" [value]="range.id">{{rrange.name}}</option>
+                  </select>
+							</div>
+					 	</div>
+					</div>-->					
+				    <div class="row">
+				    	<div class="col-md-6 pull-left">	    		
+							<div class="form-group"><label for="lowerlimit{{index}}" class="required"><span class="field-name">Lower Concentration %</span> <strong class="required">(required)</strong></label>
+								<input class="form-control ingredLimit_validation" type="text" id="lowerlimit{{index}}" name="lowerlimit{{index}}" formControlName="lowerlimit" placeholder="Lower Concentration %" required size="30" onkeypress="return noEnter(event)"/>
+		   					</div>
+				    	</div>
+				    </div>
+				    <div class="row">
+				   		<div class="col-md-6 pull-left">
+							 <div class="form-group"><label for="upperlimit{{index}}" class="required"><span class="field-name">Upper Concentration %</span> <strong class="required">(required)</strong></label>
+                <input class="form-control ingredLimit_validation" type="text" id="upperlimit{{index}}" name="upperlimit{{index}}" formControlName="upperlimit"  placeholder="Upper Concentration %" required size="30" onkeypress="return noEnter(event)"/>
+		   					</div>
+				    	</div>
+				    </div>				  
+					 <div class="row">
+				    	<div class="col-md-6 pull-left">
+						    <div class="form-group"><label for="lkpIngredientValidationIdStr{{index}}"><span class="field-name">Search Result</span></label>
+						    			 <input class="form-control" type="text" id="lkpIngredientValidationIdStr{{index}}" name="lkpIngredientValidationIdStr{{index}}" formControlName="lkpIngredientValidationIdStr" size="60" readonly="readonly" onkeypress="return noEnter(event)"/>
+					    	</div>
+					    </div>
+					</div>
+					<div class="row"> 
+					    <div class="col-sm-10"> 				    	
+						    <div class="form-group"><label for="conditionTextE{{index}}"><span class="field-name">Condition of use</span></label>
+						    		 <textarea class="form-control" id="conditionTextE{{index}}" name="conditionTextE{{index}}" formControlName="conditionTextE" rows="3" cols="150" readonly="readonly"></textarea>
+					    	</div>
+					    </div>				    					    
+				    </div>		    		 	
+			</div>	

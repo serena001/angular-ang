@@ -1,0 +1,22 @@
+<div [formGroup]="devicesVoluntaryFrmGrp">
+		<div formGroupName="device">	
+
+			<!--<div *ngFor="let document of documentsFrmGrp.controls.document.controls; let i=index">-->
+				<div *ngFor="let device of getDevices(devicesVoluntaryFrmGrp); let i=index">
+					<div [formGroupName]="i">
+						<div class="panel panel-primary">
+							<div class="panel-heading"><h3 class="panel-title">Device {{i+1}}</h3></div>
+							<div class="panel-body">
+									<app-product-voluntary [group]="devicesVoluntaryFrmGrp.controls.device.controls[i]" [index]=i></app-product-voluntary>
+									<button type="button" class="btn btn-lg btn-info pull-right"  (click)="removeDevice(i)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>remove product {{'removeDocBttn' | translate:lang }}</button>
+							</div>
+						</div>
+					</div> 
+				</div>
+		</div>
+		 <div class="row">
+                <div class="form-group">
+                    <button type="button" class="btn btn-lg btn-primary pull-right" (click)="addDevice()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> add a person</button>
+                </div>
+            </div>
+		</div>

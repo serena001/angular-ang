@@ -1,0 +1,18 @@
+  <div  [formGroup]="productCommonFrmGrp">
+            <div class="row">
+                <div class="col-md-6 pull-left">
+                    <div class="form-group"><label for="productBrandName" class="required"><span class="field-name">Product Brand and Name</span> <strong class="required">(required)</strong></label>
+                         <textarea class="form-control" id="productBrandName" name="productBrandName" formControlName="productBrandName" required placeholder="Product Brand and Name" rows="1" cols="60" maxlength="100"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+		            <div class="col-md-6 pull-left">
+                      <div class="form-group"><label for="productDescription" class="required"><span class="field-name">Product Description (for example: colour, packaging, warnings on the label)</span> <strong class="required">(required)</strong></label><br>
+                           <small>Characters remaining: <span></span></small>
+                           <textarea class="form-control" id="productDescription" name="productDescription" formControlName="productDescription" ng-trim="false" required placeholder="Product description" rows="5" cols="100" maxlength="1500"></textarea>                       
+                      </div>
+                </div>
+            </div>            
+   </div>
+

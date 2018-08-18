@@ -1,0 +1,18 @@
+ <div [formGroup]="personContactFrmGrp">
+    <div class="row">            
+              <div class="col-md-6 pull-left">
+                <div class="form-group"><label for="personName{{sectionName}}{{formName}}{{index}}" class="required"><span class="field-name">Name (first name and last name)</span> <strong class="required">(required)</strong></label>
+                     <textarea class="form-control" id="personName{{sectionName}}{{formName}}{{index}}" name="personName{{sectionName}}{{formName}}{{index}}" formControlName="personName" required placeholder="Name" rows="1" cols="60" maxlength="50"></textarea>
+                </div>
+            </div> 
+    </div> 
+    <div class="row">            
+      <div class="col-md-6 pull-left">
+        <div class="form-group"><label for="personNameNew" class="required"><span class="field-name">Name (first name and last name)</span> <strong class="required">(required)</strong></label>
+             <textarea class="form-control" type="text" id="personNameNew" name="personNameNew" formControlName="personName" required placeholder="Name" rows="1" cols="60" maxlength="50"></textarea>
+        </div>
+    </div> 
+</div>   
+  <app-contact-common [group]="personContactFrmGrp" [sectionName]=sectionName [index]=index [formName]=formName></app-contact-common>
+</div>
+               

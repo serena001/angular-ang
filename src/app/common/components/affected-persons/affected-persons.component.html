@@ -1,0 +1,24 @@
+ <div [formGroup]="affectedPersonsFrmGrp">
+        <p><small>You can report up to 10 affected persons. Please enter the person affected the most first.</small></p>
+           
+            <p><small>Use one sub-form per person. Click on the "Add a Person" button to add each additional person. Click on the "Remove Person" button to remove a person.</small></p>
+	<app-remove-section-dialogue></app-remove-section-dialogue>    
+            <div formGroupName="affectedPerson">
+                <div *ngFor="let affectedPerson of getAffectedPersons(affectedPersonsFrmGrp); let i=index">
+                    <div [formGroupName]="i">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading"><h3 class="panel-title">Affected Person {{i+1}}</h3></div>
+                                <div class="panel-body">
+                                    <app-affected-person [group]="affectedPersonsFrmGrp.controls.affectedPerson.controls[i]" [index]=i></app-affected-person>               
+                                	<button type="button" class="btn btn-lg btn-info pull-right"  (click)="removeAffectedPerson(i)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> remove affected Person</button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>        
+            <div class="row">
+                <div class="form-group">
+                    <button type="button" class="btn btn-lg btn-primary pull-right" (click)="addAffectedPerson()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> add a person</button>
+                </div>
+            </div>
+ </div> 

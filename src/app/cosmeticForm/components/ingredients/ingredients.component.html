@@ -1,0 +1,20 @@
+<div [formGroup]="ingredientsFrmGrp">
+		<div formGroupName="ingredient">	
+			<div *ngFor="let ingredient of getIngredients(ingredientsFrmGrp); let i=index">
+					<div [formGroupName]="i">
+						<div class="panel panel-primary">
+							<div class="panel-heading"><h3 class="panel-title">INGREDIENT {{i+1}}</h3></div>
+							<div class="panel-body">
+									<app-ingredient [group]="ingredientsFrmGrp.controls.ingredient.controls[i]" [index]=i></app-ingredient>
+									<button type="button" class="btn btn-lg btn-info pull-right"  (click)="removeIngredient(i)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> remove ingredient</button>
+							</div>
+						</div>
+					</div> 
+				</div>
+		</div>
+     <div class="row">
+                <div class="form-group">
+                    <button type="button" class="btn btn-lg btn-primary pull-right" (click)="addIngredient()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> add a ingredient</button>
+                </div>
+            </div>
+		</div>

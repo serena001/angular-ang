@@ -1,0 +1,65 @@
+<h1 property="name" id="wb-cont">Cosmetic Notification Form</h1>
+<p></p>
+  <div class="wb-frmvld">    
+    <form role="form"  name="hcform" id="hcform" [formGroup]="myForm" (ngSubmit)="save(myForm)" action="#" >
+		<div formGroupName="report">
+			<app-report-cosmetic [group]="myForm.controls.report"></app-report-cosmetic>
+		</div>	
+		<div formGroupName="product">
+			<app-product-cosmetic [group]="myForm.controls.product"></app-product-cosmetic>
+		</div>
+		    	<h2>Notifier - Section 3</h2>
+    	<p>The notifier can be the manufacturer, an importer or the person responsible on their behalf. All correspondence will be sent to the notifier. 
+    	Indicate the full legal business name, complete mailing address and contact information of 
+    	the person/company submitting the notification.</p>
+		<div formGroupName="submitter">
+			<app-submitter-industry [group]="myForm.controls.submitter" [formName]="formName"></app-submitter-industry>
+		</div>
+		    		<h2>Manufacturing and Distribution - Section 4</h2>
+    		<div>
+    			<p>Select the contact. List the manufacturer as it appears on the product label. Also list any additional manufacturers and Canadian distributors. One of the contacts must be located in Canada.</p>
+    			<p>Click on the “Add Contact” button to add each additional contact. Click on the “Remove Contact” button to remove a contact.</p>
+    		</div>
+		<div formGroupName="contacts">
+			<app-contacts-cosmetic [group]="myForm.controls.contacts" [formName]="formName"></app-contacts-cosmetic>
+		</div> 
+		   		  <h2>Product Ingredients - Section 5</h2>
+   			<p>Enter one ingredient per line. Use the International Nomenclature of Cosmetic Ingredients (<abbr title="International Nomenclature of Cosmetic Ingredients">INCI</abbr>) where possible.
+			Click the “Search Ingredient” button to validate the ingredient. The status of the ingredient will appear in the “Search Result” field below.  Any condition that applies to the ingredient will appear in the “Condition of Use” field. 
+			Check the spelling, spaces and punctuation if the status is “Unknown” or “Not found”. For exact concentration, enter the same value in both “Lower Concentration %” and “Upper Concentration %” fields OR 
+			select a range code from the drop-down list. If a range code is selected, the lower and upper concentrations will be automatically entered. 
+			Check “May Contain” if the ingredient is variable. </p>
+		<div formGroupName="ingredients">
+			<app-ingredients [group]="myForm.controls.ingredients" [formName]="formName"></app-ingredients>
+		</div>
+				<h2>Documents and pictures - Section 6</h2>
+		<p>Add any additional required documents. Consult the guide.</p>
+		<app-upload-attach [form]="myForm"></app-upload-attach>
+
+		<div formGroupName="documents">
+			<app-documents [group]="myForm.controls.documents"></app-documents>
+		</div>	
+		<h2>How to submit your Cosmetic Notification Form - Section 7</h2>
+		<ol>
+			<li>Click the "Proceed to Submit" button below.</li>
+			<li>The mandatory fields identified on the online form and size limit of 70 Mb will be verified automatically.</li>
+			<li>You will see a pop up displaying a confirmation that your submission was successful along with the assigned Case Number and Submission Number.</li>
+			<li>Save the information entered on the online form on your computer once the Case Number and Submission Number are provided. See section on 'How to save' for more details.</li>
+		</ol>	
+		<div formGroupName="submitForm">
+			<app-submit-form [group]="myForm.controls.submitForm"></app-submit-form>
+		</div>
+		<div class="row">
+			<div class="form-group">
+					<button type="submit" class="btn btn-lg btn-primary pull-left">Proceed to Submit</button>
+			</div>
+		</div>
+		<app-how-to-save [form]="myForm"></app-how-to-save>
+		<app-how-to-import [form]="myForm"></app-how-to-import>
+		<app-message-dialogue></app-message-dialogue>
+	</form>
+</div>
+
+
+
+

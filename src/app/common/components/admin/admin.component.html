@@ -1,0 +1,24 @@
+<div   [formGroup]="adminFrmGrp">
+ 
+            <h2>Administrative information</h2>
+           
+		    <p>Health Canada invites you to  <a id="subscribe_link" href="http://www.hc-sc.gc.ca/cps-spc/advisories-avis/_subscribe-abonnement/index-eng.php" title="Subscribe to our consumer product safety newsletter. (external link)">subscribe to our consumer product safety newsletter</a> so you can receive the latest news and information.</p>
+          <div class="row">
+             <div class="col-md-6 pull-left">
+                  <div class="form-group"><label for="lkpHowAwareIncdtId" class="required"><span class="field-name">In your opinion, are corrective measures required</span> <strong class="required">(required)</strong></label>
+                         <select class="form-control" id="lkpHowAwareIncdtId" formControlName="lkpHowAwareIncdtId" required>
+                               <option value="">Select how did you become aware</option>
+                                <option *ngFor="let howAware of lstHowAwares" [value]="howAware.id">{{howAware.name}}</option>
+                          </select>
+                    </div>
+            </div>
+             <div class="col-md-6 pull-right"> 
+                          <div class="form-group"><label for="lkpReportedIncidentId" class="required"><span class="field-name">Have you reported this incident to the manufacturer or retail store</span></label> 
+                              <select class="form-control" id="lkpReportedIncidentId" formControlName="lkpReportedIncidentId" required>
+                              <option value="">Select have you reported this incident</option>
+                                <option *ngFor="let lstIncidentReported of lstIncidentReportedTo" [value]="lstIncidentReported.id">{{lstIncidentReported.name}}</option>
+                          </select>                              
+                   </div> 
+             </div>
+        </div>                  
+</div>

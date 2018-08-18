@@ -1,0 +1,22 @@
+<div [formGroup]="contactsCosmeticFrmGrp">
+
+		<div formGroupName="contact">	
+			<div *ngFor="let contact of getContacts(contactsCosmeticFrmGrp); let i=index">
+					<div [formGroupName]="i">
+						<div class="panel panel-primary">
+							<div class="panel-heading"><h3 class="panel-title">CONTACT {{i+1}}</h3></div>
+							<div class="panel-body">
+									<app-contact [group]="contactsCosmeticFrmGrp.controls.contact.controls[i]" [index]=i [sectionName]=sectionName [formName]=formName></app-contact>
+									<button type="button" class="btn btn-lg btn-info pull-right"  (click)="removeContact(i)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> remove contact</button>
+							</div>
+						</div>
+					</div> 
+				</div>				
+		</div>
+		 <div class="row">
+                <div class="form-group">
+                    <button type="button" class="btn btn-lg btn-primary pull-right" (click)="addContact()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> add a contact</button>
+                </div>
+            </div>
+		</div>
+

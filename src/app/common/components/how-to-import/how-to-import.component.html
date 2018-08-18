@@ -1,0 +1,19 @@
+<div>
+  <h2>{{'titleHowToImport' | translate:lang }}</h2>
+  <div class="panel panel-primary">
+                      <div class="panel-heading"><h3 class="panel-title">{{'panelTitleHowToImport' | translate:lang }}</h3></div>
+                      <div class="panel-body">
+              <div>
+                <ol>
+                  <li>{{'howToImportBullet1' | translate:lang }}</li>
+                  <li>{{'howToImportBullet2' | translate:lang }}</li>
+                  <li>{{'howToImportBullet3' | translate:lang }}</li>
+                  <li>{{'howToImportBullet4' | translate:lang }}</li>
+                  <li>{{'howToImportBullet5' | translate:lang }}</li>
+                </ol>
+              </div>
+              <input type="file" id="loadfile" (change)="importFormData($event)"/><br>
+          </div>
+      <!--    <button type="button" class="btn btn-lg btn-primary pull-left"  (click)="testing()">testing</button>-->
+  </div>
+</div> 

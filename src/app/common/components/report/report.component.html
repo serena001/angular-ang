@@ -1,0 +1,36 @@
+
+   <div class="report" [formGroup]="reportFormGrp">
+  
+        <h2>{{ 'report' | translate:lang }}</h2>       
+        <div class="row">
+              <div class="col-md-6 pull-right">
+                   <div class="form-group"><label for="lkpGovernanceId" class="required"><span class="field-name">{{ 'productType' | translate:lang }}</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
+                         <select class="form-control" id="lkpGovernanceId" formControlName="lkpGovernanceId" >
+                            <!--   <option  [value]="">{{'selectProductType' | translate:lang }}</option>  -->    
+                            <!-- <option label="{{'selectProductType' | translate:lang }}"></option> -->                      
+                                <option *ngFor="let lstProductType of lstProductTypes" [value]="lstProductType.id">{{lstProductType.name}}</option>
+                          </select>
+                    </div>               		
+             </div>
+             <div class="col-md-6 pull-left">
+                <div class="form-group"><label for="lkpReportTypeId" class="required"><span class="field-name">{{ 'reportType' | translate:lang }}</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
+                         <select class="form-control" id="lkpReportTypeId" formControlName="lkpReportTypeId" #reportTypeIdVal (change)="setCaseNo($event,reportTypeIdVal.value)" >
+                             <!--    <option [value]="">{{'selectReportType' | translate:lang }} </option>-->
+                             <!--     <option label="{{'selectProductType' | translate:lang }}"></option>  -->
+                                <option *ngFor="let lstReportType of lstReportTypes" [value]="lstReportType.id">{{lstReportType.name}}</option>
+                          <!--   <option *ngFor="let lstReportType of lstReportTypes" [value]="lstReportType.cosTextEn">{{lstReportType.cosTextFr}}</option>-->
+                          </select> 
+                          
+                    </div>
+              </div>               
+             
+        </div>
+        <div class="row">
+              <div class="col-md-6 pull-left">
+                <div [hidden]="showCase" class="form-group"><label for="report_caseNo" class="required"><span class="field-name">{{ 'caseNumber' | translate:lang }}</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
+                         <input  class="form-control" id="report_caseNo" formControlName="caseNo" type="text"
+                                   placeholder="ex.2014-000001" maxlength="11" onkeypress="return noEnter(event)"/>
+                    </div>
+              </div>            
+        </div>        
+  </div>

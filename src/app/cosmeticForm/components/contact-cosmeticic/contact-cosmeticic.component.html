@@ -1,0 +1,13 @@
+ <div [formGroup]="contactCosmeticFrmGrp">         	   
+      <div class="row"> 
+            <div class="col-md-6 pull-left">
+                <div class="form-group"><label for="lkpContactContextId{{sectionName}}{{formName}}{{index}}" class="required"><span class="field-name">Contact Type</span> <strong class="required">(required)</strong></label>
+                       <select class="form-control" id="lkpContactContextId{{sectionName}}{{formName}}{{index}}" name="lkpContactContextId{{sectionName}}{{formName}}{{index}}" formControlName="lkpContactContextId" >
+                                <option value="">Notification Type</option>
+                                <option *ngFor="let lkpContactContext of  lkpContactContextIds" [value]="lkpContactContext.id">{{lkpContactContext.name}}</option>
+                        </select> 
+                </div>
+            </div>
+    </div> 
+        <app-business-contact [group]="contactCosmeticFrmGrp" [sectionName]=sectionName [index]=index [formName]=formName></app-business-contact>         
+ </div>

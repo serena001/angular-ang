@@ -1,0 +1,12 @@
+  <div  [formGroup]="claimOfConfidentialityFrmGrp">
+    <h3>Claim of Confidentiality and Privacy Notice</h3>
+        <div class="form-group"><label for="lkpPrivacyNoticeCbiId" class="required"><span class="field-name">Claim of Confidential Business Information. The person submitting this report claims that this report and all attachments are confidential business information.
+            </span> <strong class="required"> (required)</strong></label>
+                   <select class="form-control" id="lkpPrivacyNoticeCbiId" formControlName="lkpPrivacyNoticeCbiId" required>
+                        <option value="">Select Yes or No</option>
+                        <option *ngFor="let lkpPrivacyNoticeCb of lkpPrivacyNoticeCbiIds" [value]="lkpPrivacyNoticeCb.id">{{lkpPrivacyNoticeCb.name}}</option>
+                   </select>
+        </div> 
+</div>
+
+        
