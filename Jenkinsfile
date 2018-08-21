@@ -1,7 +1,7 @@
 node{
 
     script {
-        System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.HEARTBEAT_CHECK_INTERVAL", "8000");
+        System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.HEART:BEAT_CHECK_INTERVAL", "10000");
     }
       stage('Git Repository'){
             git branch:'master',
