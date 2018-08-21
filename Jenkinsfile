@@ -10,8 +10,8 @@ node{
        }
        stage('Node and npm install'){
            def imageName = 'smkm001/node'
-           def dockerFileDir = '.'
-        def customImage=docker.build("${imageName}","${dockerFileDir}")
+        //   def dockerFileDir = '.'
+        //def customImage=docker.build("${imageName}","${dockerFileDir}")
          withDockerContainer(args: "-u root", image: "${imageName}") {
             sh "npm install"
             sh 'npm install -g @angular/cli'
