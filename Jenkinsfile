@@ -9,6 +9,8 @@ node{
             url:'https://github.com/serena001/angular-ang.git'
        }
        stage('Node and npm install'){
+           env.NODEJS_HOME = "${tool 'nodeJS10'}"
+           env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
             sh "npm install"
             sh 'npm install -g @angular/cli'
             sh 'ng build --prod  --output-path=dist/angularAppNodeInstall/fr/ --index=src/fr/index.html --deploy-url=./'
