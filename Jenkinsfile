@@ -13,7 +13,5 @@ node{
             sh 'npm install -g @angular/cli'
             sh 'ng build --prod  --output-path=dist/angularAppNodeInstall/fr/ --index=src/fr/index.html --deploy-url=./'
             sh 'ng build --prod  --output-path=dist/angularAppNodeInstall/en/ --index=src/en/index.html --deploy-url=./'
-
-          }
        }
 }
