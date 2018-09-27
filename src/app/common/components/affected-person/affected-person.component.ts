@@ -1,6 +1,7 @@
 import { Component, OnInit ,Input} from '@angular/core';
 import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 import { AffectedPersonService } from '../../services/affected-person.service';
+import {Localization,LocaleService,TranslationService,Language} from 'angular-l10n';
 declare var $:any;
 @Component({
   selector: 'app-affected-person',
@@ -8,6 +9,7 @@ declare var $:any;
   styleUrls: ['./affected-person.component.css']
 })
 export class AffectedPersonComponent implements OnInit {
+@Language() lang:string;
 @Input('group')
 public affectedPersonFrmGrp:FormGroup;
 @Input('index')
@@ -21,10 +23,14 @@ lkpInjuryTypeIds;
 lkpTreatmentTypeIds;
 lkpBodyPartIds;
 
-  constructor(private affectedPersonService:AffectedPersonService,private _fb:FormBuilder) { }
+  constructor(
+		private affectedPersonService:AffectedPersonService,
+		private _fb:FormBuilder,
+		public locale: LocaleService) { }
 
   ngOnInit() {
-		
+	var language = $( "html" ).attr("lang");
+	this.locale.setCurrentLanguage(language);
   this.affectedPersonService.getLkpGenderIds().then(lkpGenderIds => this.lkpGenderIds = lkpGenderIds);
   this.affectedPersonService.getLstAgeRange().then(lstAgeRange => this.lstAgeRange = lstAgeRange);
 	this.affectedPersonService.getLkpIncidentTypeIds().then(lkpIncidentTypeIds => this.lkpIncidentTypeIds = lkpIncidentTypeIds);

@@ -1,0 +1,5 @@
+{
+    "numberAffectedPersons":"Number of people affected (only accepts a number between 0 and 999)",
+    "incidentDescription":"Describe the Incident"
+}
+

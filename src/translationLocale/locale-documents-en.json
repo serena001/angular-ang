@@ -1,4 +1,5 @@
 {
     "docsTitle":"DOCUMENT",
-    "removeDocBttn": "remove document"
+    "removeDocBttn": "remove document",
+    "removeAllDocBttn":"enlever tous les documents"
 }

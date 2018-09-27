@@ -6,6 +6,7 @@ import { ProceedToSubmitFormService } from '../../services/proceed-to-submit-for
 import { TranslationLocaleService } from '../../services/translation-locale.service';
 import {Localization,LocaleService,TranslationService,Language} from 'angular-l10n';
 import {ImportInformationService} from '../../services/import-information.service';
+
 declare var $:any;
 @Component({
   selector: 'app-how-to-import',
@@ -23,7 +24,8 @@ export class HowToImportComponent implements OnInit {
 		private proceedToSubmitFormService:ProceedToSubmitFormService,
 		private importInformationService:ImportInformationService,
       public locale: LocaleService, 
-    public translation:TranslationService){}
+	public translation:TranslationService,
+	){}
 
   ngOnInit() {
 	var language = $( "html" ).attr("lang");

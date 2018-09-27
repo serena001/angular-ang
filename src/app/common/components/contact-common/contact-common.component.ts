@@ -1,13 +1,15 @@
 import { Component, OnInit,Input} from '@angular/core';
 import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 import { ContactCommonService } from '../../services/contact-common.service';
-
+import {Localization,LocaleService,TranslationService,Language} from 'angular-l10n';
+declare var $:any;
 @Component({
   selector: 'app-contact-common',
   templateUrl: './contact-common.component.html',
   styleUrls: ['./contact-common.component.css']
 })
 export class ContactCommonComponent implements OnInit {
+@Language() lang:string;
 @Input('group')
 public contactCommonFrmGrp:FormGroup;
  @Input('sectionName')
@@ -20,7 +22,10 @@ public contactCommonFrmGrp:FormGroup;
 	lstCountries;
 	lstProvinces;
 	lstStates;
-  constructor(private contactCommonService: ContactCommonService) { }
+  constructor(
+		private contactCommonService: ContactCommonService,
+		public locale: LocaleService, 
+		) { }	  
 
   showProvince:boolean =true;
   showState:boolean =true;
@@ -28,6 +33,8 @@ public contactCommonFrmGrp:FormGroup;
   provinceRegion:string="";
   country:string="";
   ngOnInit() {
+		var language = $( "html" ).attr("lang");
+	this.locale.setCurrentLanguage(language);
 			this.contactCommonService.getLstCountries().then(lstCountries => this.lstCountries = lstCountries);
   this.contactCommonService.getLstProvinces().then(lstProvinces => this.lstProvinces = lstProvinces);
   this.contactCommonService.getLstStates().then(lstStates => this.lstStates = lstStates);

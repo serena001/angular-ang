@@ -1,0 +1,13 @@
+{
+    "address":"address",
+    "city":"city",
+    "postalCode":"postal code",
+    "country":"country",
+    "otherCountry":"other country",
+    "province":"province",
+    "state":"state",
+    "region":"",
+    "email":"",
+    "telephone":"",
+    "fax":""
+}

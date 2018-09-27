@@ -31,28 +31,28 @@ export class AffectedPersonService {
      return Promise.resolve(lkpBodyPartIds);
   }
   ngInitDefaultValue=this._fb.group({
-	incidentExperiencedDate:['2017-03-23'],
-	lkpGenderId:[' '],
-	ageRange:[' '],
-	lkpIncidentTypeId:[' '],
-	lkpInjuryTypeId:[' '],
-	lkpTreatmentTypeId:[' ']
-	,lkpBodyPartId:[' '],
-	ageMths:['9'],
-	ageYrs:[' '],
-	ageMths_temp:[' ']
+	incidentExperiencedDate:[],
+	lkpGenderId:[],
+	ageRange:[],
+	lkpIncidentTypeId:[],
+	lkpInjuryTypeId:[],
+	lkpTreatmentTypeId:[]
+	,lkpBodyPartId:[],
+	ageMths:[],
+	ageYrs:[],
+	ageMths_temp:[]
         })
   ngInitDefaultValueNoFormGroup={
-	incidentExperiencedDate:['2017-03-23'],
-	lkpGenderId:[' '],
-	ageRange:[' '],
-	lkpIncidentTypeId:[' '],
-	lkpInjuryTypeId:[' '], 
-	lkpTreatmentTypeId:[' ']
-	,lkpBodyPartId:[' '],
-	ageMths:['9'],
-	ageYrs:[' '],
-	ageMths_temp:[' ']
+	incidentExperiencedDate:[],
+	lkpGenderId:[],
+	ageRange:[],
+	lkpIncidentTypeId:[],
+	lkpInjuryTypeId:[], 
+	lkpTreatmentTypeId:[]
+	,lkpBodyPartId:[],
+	ageMths:[],
+	ageYrs:[],
+	ageMths_temp:[]
         }
 
 }

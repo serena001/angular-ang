@@ -3,16 +3,16 @@
        
                         <div class="row">
                             <div class="col-md-6 pull-left">
-                                 <div class="form-group"><label for="incidentExperiencedDate_{{index}}" class="required"><span class="field-name">Date of the Incident </span><span class="datepicker-format">(<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span> <strong class="required">(required)</strong></label>
+                                 <div class="form-group"><label for="incidentExperiencedDate_{{index}}" class="required"><span class="field-name">{{'dateOfIncident' | translate:lang }}</span><span class="datepicker-format">(<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
                                       <input class="form-control" id="incidentExperiencedDate_{{index}}" name="incidentExperiencedDate_{{index}}" 
                                                formControlName="incidentExperiencedDate" hcform-datepicker 
                                                type="date"  data-rule-dateISO="true" required  onkeypress="return noEnter(event)"/>
                                   </div>
                             </div>
                             <div class="col-md-6 pull-right">
-                                 <div class="form-group"><label for="lkpGenderId_{{index}}" class="required"><span class="field-name">Gender</span><strong class="required">(required)</strong></label>
+                                 <div class="form-group"><label for="lkpGenderId_{{index}}" class="required"><span class="field-name">{{'gender' | translate:lang }}</span><strong class="required">({{ 'required' | translate:lang }})</strong></label>
                                     <select class="form-control" id="lkpGenderId_{{index}}" name="lkpGenderId_{{index}}" formControlName="lkpGenderId" required="required">
-                                        <option label="Select Gender"></option>
+                                        <option label="{{'lkpGenderIdOption' | translate:lang }}"></option>
                                         <option *ngFor="let gender of lkpGenderIds" [value]="gender.id">{{gender.name}}</option>
                                     </select>
                                   </div>                                
@@ -20,42 +20,42 @@
                         </div>
                         <div class="row">
                              <div class="col-md-6 pull-left">
-                                  <div class="form-group"><label for="ageRange_{{index}}" class="required"><span class="field-name">Age Range</span></label>
+                                  <div class="form-group"><label for="ageRange_{{index}}" class="required"><span class="field-name">{{'ageRange' | translate:lang }}</span></label>
                                     <select class="form-control" id="ageRange_{{index}}" name="ageRange_{{index}}" formControlName="ageRange" #ageRange (change)="setAgeRange($event,ageRange.value)" required >
-                                       <option value="">Select an age Range</option>
+                                       <option label="{{'lstAgeRangeOption' | translate:lang }}"></option>
                                         <option *ngFor="let age of lstAgeRange" [value]="age.id">{{age.name}}</option>
                                     </select>
                                   </div>                                
                              </div>
                             <div class="col-md-6 pull-right">
-                                  <div class="form-group" [hidden]="showAgeMths"><label for="ageMths_temp_{{index}}"><span class="field-name">Age (months - only accepts a number between 1 and 24)</span></label>
+                                  <div class="form-group" [hidden]="showAgeMths"><label for="ageMths_temp_{{index}}"><span class="field-name">{{'ageMnths' | translate:lang }})</span></label>
                                      <input class="form-control age_validation_month_CPS" type="text" id="ageMths_temp_{{index}}" name="ageMths_temp_{{index}}" formControlName="ageMths"
-                                            placeholder="Age (months)"  onkeypress="return noEnter(event)"/>
+                                              onkeypress="return noEnter(event)"/>
                                  </div>
-                                 <div class="form-group" [hidden]="showAgeYrs"><label for="ageYrs_{{index}}"><span class="field-name">Age (years - only accepts a number between 3 and 999)</span></label>
+                                 <div class="form-group" [hidden]="showAgeYrs"><label for="ageYrs_{{index}}"><span class="field-name">{{'ageYrs' | translate:lang }}</span></label>
                                      <input class="form-control age_validation_year_CPS" type="text" id="ageYrs_{{index}}" name="ageYrs_{{index}}" formControlName="ageYrs"                                            
-                                            placeholder="Age (years)"  onkeypress="return noEnter(event)"/>
+                                              onkeypress="return noEnter(event)"/>
                                   </div>
                                 <!--  <div class="form-group" ><label for="affectedPerson_ageMths_temp"><span class="field-name">Age (months - only accepts a number between 1 and 24)</span></label>
                                      <input class="form-control age_validation_month_CPS" type="text" id="affectedPerson_ageMths_temp" name="affectedPerson_ageMths_temp"
-                                            placeholder="Age (months)"  onkeypress="return noEnter(event)"/>
+                                              onkeypress="return noEnter(event)"/>
                                  </div>-->
                                  
                              </div>                             
                         </div>
                         <div class="row">
                             <div class="col-md-6 pull-left">
-                                   <div class="form-group"><label for="lkpIncidentTypeId_{{index}}" class="required"><span class="field-name">Incident Type</span></label>
+                                   <div class="form-group"><label for="lkpIncidentTypeId_{{index}}" class="required"><span class="field-name">{{'incidentType' | translate:lang }}</span></label>
                                     <select class="form-control" id="lkpIncidentTypeId_{{index}}" name="lkpIncidentTypeId_{{index}}" formControlName="lkpIncidentTypeId" required>
-                                         <option value="">Select Incident Type</option>
+                                         <option label="{{'lkpIncidentTypeIdOption' | translate:lang }}"></option>
                                         <option *ngFor="let incidentType of lkpIncidentTypeIds" [value]="incidentType.id">{{incidentType.name}}</option>
                                     </select>
                                   </div>                                  
                              </div>
                              <div class="col-md-6 pull-right">
-                                  <div class="form-group"><label for="lkpInjuryTypeId_{{index}}" class="required"><span class="field-name">Injury Type</span></label>
+                                  <div class="form-group"><label for="lkpInjuryTypeId_{{index}}" class="required"><span class="field-name">{{'injuryType' | translate:lang }}</span></label>
                                     <select class="form-control" id="lkpInjuryTypeId_{{index}}" name="lkpInjuryTypeId_{{index}}" formControlName="lkpInjuryTypeId" required>
-                                         <option value="">Select Injury Type</option>
+                                         <option label="{{'lkpInjuryTypeIdOption' | translate:lang }}"></option>
                                         <option *ngFor="let injury of lkpInjuryTypeIds" [value]="injury.id">{{injury.name}}</option>
                                     </select>
                                   </div>                                
@@ -63,17 +63,17 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6 pull-left">
-                                 <div class="form-group"><label for="lkpTreatmentTypeId_{{index}}" class="required"><span class="field-name">Treatment</span></label>
+                                 <div class="form-group"><label for="lkpTreatmentTypeId_{{index}}" class="required"><span class="field-name">{{'treatment' | translate:lang }}</span></label>
                                     <select class="form-control" id="lkpTreatmentTypeId_{{index}}" name="lkpTreatmentTypeId_{{index}}" formControlName="lkpTreatmentTypeId" required>
-                                         <option value="">Select Treatment Type</option>
+                                         <option label="{{'lkpTreatmentTypeIdOption' | translate:lang }}"></option>
                                         <option *ngFor="let treatment of lkpTreatmentTypeIds" [value]="treatment.id">{{treatment.name}}</option>
                                     </select>
                                   </div>                                
                              </div>
                              <div class="col-md-6 pull-right">
-                                  <div class="form-group"><label for="lkpBodyPartId_{{index}}" class="required"><span class="field-name">Body Part</span></label>
+                                  <div class="form-group"><label for="lkpBodyPartId_{{index}}" class="required"><span class="field-name">{{'bodyPart' | translate:lang }}</span></label>
                                     <select class="form-control" id="lkpBodyPartId_{{index}}" name="lkpBodyPartId_{{index}}" formControlName="lkpBodyPartId" required>
-                                         <option value="">Select Body Part</option>
+                                         <option label="{{'lkpBodyPartIdOption' | translate:lang }}"></option>
                                         <option *ngFor="let part of lkpBodyPartIds" [value]="part.id">{{part.name}}</option>
                                     </select>
                                   </div>

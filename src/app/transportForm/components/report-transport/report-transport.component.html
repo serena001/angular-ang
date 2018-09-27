@@ -11,7 +11,7 @@
    	  	    </small></p>
    	  		<div class="row">
    				<div class="col-md-6 pull-left">   				    
-    		 	    <div class="form-group"><label for="prgrmId" class="required"><span class="field-name">Programme</span> <strong class="required">(required)</strong></label> 
+    		 	    <div class="form-group"><label for="prgrmId" class="required"><span class="field-name">Programme</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label> 
     					    <select class="form-control" id="prgrmId" formControlName="prgrmId" required>
                       <option value="">Select Programme</option>
                       <option *ngFor="let program of lstPrograms" [value]="program.id">{{program.name}}</option>
@@ -19,9 +19,9 @@
 					</div>
 				</div>
               <div class="col-md-6 pull-left">
-                <div  class="form-group"><label for="report_caseNo" class="required"><span class="field-name">Case Number</span> <strong class="required">(required)</strong></label>
+                <div  class="form-group"><label for="report_caseNo" class="required"><span class="field-name">Case Number</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
                          <input  class="form-control" id="report_caseNo" formControlName="caseNo" type="text"
-                                   placeholder="ex.2014-000001" maxlength="11" onkeypress="return noEnter(event)"/>
+                                    maxlength="11" onkeypress="return noEnter(event)"/>
                     </div>
               </div>    
     </div> 

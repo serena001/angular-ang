@@ -2,8 +2,8 @@
 
 			   		<div class="row">
 			   			<div class="col-md-9 pull-left"> 
-					   		<div class="form-group"><label for="ingredientName{{index}}" class="required"><span class="field-name">Name</span> <strong class="required">(required)</strong></label>
- 				    				<textarea class="form-control" id="ingredientName{{index}}" name="ingredientName{{index}}" #ingredient formControlName="ingredientName" required placeholder="Ingredient Name" rows="1" cols="100" maxlength="2000">
+					   		<div class="form-group"><label for="ingredientName{{index}}" class="required"><span class="field-name">Name</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
+ 				    				<textarea class="form-control" id="ingredientName{{index}}" name="ingredientName{{index}}" #ingredient formControlName="ingredientName" required  rows="1" cols="100" maxlength="2000">
 					    			</textarea>
 				    		</div>				    	
 				    	</div>
@@ -32,15 +32,15 @@
 					</div>-->					
 				    <div class="row">
 				    	<div class="col-md-6 pull-left">	    		
-							<div class="form-group"><label for="lowerlimit{{index}}" class="required"><span class="field-name">Lower Concentration %</span> <strong class="required">(required)</strong></label>
-								<input class="form-control ingredLimit_validation" type="text" id="lowerlimit{{index}}" name="lowerlimit{{index}}" formControlName="lowerlimit" placeholder="Lower Concentration %" required size="30" onkeypress="return noEnter(event)"/>
+							<div class="form-group"><label for="lowerlimit{{index}}" class="required"><span class="field-name">Lower Concentration %</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
+								<input class="form-control ingredLimit_validation" type="text" id="lowerlimit{{index}}" name="lowerlimit{{index}}" formControlName="lowerlimit"  required size="30" onkeypress="return noEnter(event)"/>
 		   					</div>
 				    	</div>
 				    </div>
 				    <div class="row">
 				   		<div class="col-md-6 pull-left">
-							 <div class="form-group"><label for="upperlimit{{index}}" class="required"><span class="field-name">Upper Concentration %</span> <strong class="required">(required)</strong></label>
-                <input class="form-control ingredLimit_validation" type="text" id="upperlimit{{index}}" name="upperlimit{{index}}" formControlName="upperlimit"  placeholder="Upper Concentration %" required size="30" onkeypress="return noEnter(event)"/>
+							 <div class="form-group"><label for="upperlimit{{index}}" class="required"><span class="field-name">Upper Concentration %</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
+                <input class="form-control ingredLimit_validation" type="text" id="upperlimit{{index}}" name="upperlimit{{index}}" formControlName="upperlimit"  required size="30" onkeypress="return noEnter(event)"/>
 		   					</div>
 				    	</div>
 				    </div>				  

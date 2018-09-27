@@ -9,9 +9,9 @@
 		                   </div>
                      </div>
                      <div class="col-md-6 pull-right">
-	                      <div class="form-group"><label for="productBrandName" class="required"><span class="field-name">Product Name</span> <strong class="required">(required)</strong></label>
+	                      <div class="form-group"><label for="productBrandName" class="required"><span class="field-name">Product Name</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
 	                           <textarea class="form-control word-wrap hidden-print" name="productBrandName" 
-	                                    formControlName="productBrandName" required placeholder="Product Name" rows="1" cols="60" maxlength="100">
+	                                    formControlName="productBrandName" required  rows="1" cols="60" maxlength="100">
 	                           </textarea>
 	                          
 	                      </div>
@@ -21,13 +21,13 @@
 	                  <div class="col-md-6 pull-left">
 	                       <div class="form-group"><label for="productLicenseNumber"><span class="field-name">Licence Number</span></label>
 	                            <input class="form-control" type="text" id="productLicenseNumber" name="productLicenseNumber" 
-	                                  formControlName="productLicenseNumber" placeholder="Licence Number" maxlength="20" size="50" onkeypress="return noEnter(event)"/>
+	                                  formControlName="productLicenseNumber"  maxlength="20" size="50" onkeypress="return noEnter(event)"/>
 	                       </div>
 	                  </div>
 	                  <div class="col-md-6 pull-right">
 	                       <div class="form-group"><label for="modelNumber"><span class="field-name">Model/Catalogue/Reference Number</span></label>
 	                            <textarea class="form-control word-wrap hidden-print" name="modelNumber" formControlName="modelNumber" 
-	                                   placeholder="Model/Catalogue/Reference Number" rows="1" cols="60" maxlength="50">
+	                                    rows="1" cols="60" maxlength="50">
 	                            </textarea>	                            	                           
 	                       </div>
 	                  </div>
@@ -36,13 +36,13 @@
 	                  <div class="col-md-6 pull-left">
 	                       <div class="form-group"><label for="serialNumber"><span class="field-name">Serial Number</span></label>
 	                            <input class="form-control" type="text" id="serialNumber" name="serialNumber" formControlName="serialNumber" 
-	                                   placeholder="Serial Number" maxlength="45" size="70" onkeypress="return noEnter(event)"/>
+	                                    maxlength="45" size="70" onkeypress="return noEnter(event)"/>
 	                       </div>
 	                  </div>
 	                  <div class="col-md-6 pull-right">
 	                       <div class="form-group"><label for="batchNumber"><span class="field-name">Lot/Batch Number</span></label>
 	                            <input class="form-control" type="text" id="batchNumber" name="batchNumber" formControlName="batchNumber" 
-	                                   placeholder="Lot/Batch Number" maxlength="45" size="70" onkeypress="return noEnter(event)"/>
+	                                    maxlength="45" size="70" onkeypress="return noEnter(event)"/>
 	                       </div>	                       
 	                  </div>
                  </div>
@@ -50,13 +50,13 @@
 	                  <div class="col-md-6 pull-left">
 	                       <div class="form-group"><label for="upc"><span class="field-name">UPC/Bar Code</span></label>
 		                        <input class="form-control" type="text" id="upc" name="upc" formControlName="upc" 
-		                               placeholder="UPC/Bar Code" maxlength="20" size="50" onkeypress="return noEnter(event)"/>
+		                                maxlength="20" size="50" onkeypress="return noEnter(event)"/>
 		                   </div>
 	                  </div>
 	                  <div class="col-md-6 pull-right">
 	                       <div class="form-group"><label for="dateCode"><span class="field-name">Expiry Date</span></label>
 		                        <textarea class="form-control word-wrap hidden-print" name="dateCode" 
-		                               formControlName="dateCode" placeholder="Expiry Date" rows="1" cols="60" maxlength="50">
+		                               formControlName="dateCode"  rows="1" cols="60" maxlength="50">
 		                        </textarea>		                           		                        
 		                   </div>
 	                  </div>
@@ -65,13 +65,13 @@
 	                  <div class="col-md-6 pull-left">
 	                       <div class="form-group"><label for="softwareNameAndVersion"><span class="field-name">Software Name and Version</span></label>
 	                            <textarea class="form-control word-wrap hidden-print" id="softwareNameAndVersion" name="softwareNameAndVersion" formControlName="softwareNameAndVersion" 
-	                                   placeholder="Software Name and Version" rows="1" cols="60" maxlength="60">
+	                                    rows="1" cols="60" maxlength="60">
 	                            </textarea>	                           	                           
 	                       </div>	                	
 	                  </div>
 	                  <div class="col-md-6 pull-right">
 	                       <div class="form-group"><label for="availableForEvaluationFlg" class="required"><span class="field-name">Is the Health Product, label or advertising available for evaluation (by selecting "Yes", I authorize Health Canada, upon submission of the health product, label and/or advertising sample, to evaluate it and/or release it to the manufacturer/importer for evaluation.
-                              NOTE: Submission of sample(s) to Health Canada relinquishes your ownership rights to that sample.)</span> <strong class="required">(required)</strong>
+                              NOTE: Submission of sample(s) to Health Canada relinquishes your ownership rights to that sample.)</span> <strong class="required">({{ 'required' | translate:lang }})</strong>
                  		      </label>
 		                        <select class="form-control" id="availableForEvaluationFlg" name="availableForEvaluationFlg"
 		                                formControlName="availableForEvaluationFlg" required>

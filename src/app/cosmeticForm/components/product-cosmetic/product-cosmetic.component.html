@@ -2,9 +2,9 @@
    			<h2>Product - Section 2</h2>
    			<div class="row">
 	   			<div class="col-md-6 pull-left">
-		   			<div class="form-group"><label for="productBrandName" class="required"><span class="field-name">Primary Product Brand and Name (as it appears on the product label) </span> <strong class="required">(required)</strong></label>
+		   			<div class="form-group"><label for="productBrandName" class="required"><span class="field-name">Primary Product Brand and Name (as it appears on the product label) </span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
 		    			<textarea class="form-control" id="productBrandName" name="productBrandName" formControlName="productBrandName" required 
-		    			          placeholder="Primary Product Brand and Name" rows="1" cols="60" maxlength="100" >
+		    			           rows="1" cols="60" maxlength="100" >
 		    			</textarea>
 		    		
 		    		</div>		   			
@@ -12,7 +12,7 @@
 		    	<div class="col-md-6 pull-right">
 		   			 <div class="form-group"><label for="industryProductIdentifier"><span class="field-name">Notifier's Reference</span></label>
 		    			 <textarea class="form-control" id="industryProductIdentifier" name="industryProductIdentifier" formControlName="industryProductIdentifier" 
-		    			           placeholder="Notifier's Reference" maxlength="100" >
+		    			            maxlength="100" >
 		    			 </textarea>
 		    			
 		    		</div>
@@ -35,7 +35,7 @@
 	    			<div class="form-group"><label for="description"><span class="field-name">Product Description</span></label><br>
 		   				<div id="characterRemaining"><small>Characters remaining: <span></span></small></div>
 		    			<textarea class="form-control"  id="description" name="description" 
-		    				        formControlName="description" ng-trim="false" placeholder="Product Description"
+		    				        formControlName="description" ng-trim="false" 
 		    				         rows="5" cols="150" maxlength="1500" >
 		    			</textarea>		   			   
 		   			</div>

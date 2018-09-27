@@ -10,9 +10,9 @@
     </div>    
     <div class="row">
        <div class="col-md-6 pull-left">
-           <div class="form-group"><label for="lkpInfoResourceTypeId_{{index}}" class="required"><span class="field-name">{{'docType' | translate:lang }}</span> <strong class="required">({{'docRequired' | translate:lang }})</strong></label> 
+           <div class="form-group"><label for="lkpInfoResourceTypeId_{{index}}" class="required"><span class="field-name">{{'docType' | translate:lang }}</span> <strong class="required">({{'required' | translate:lang }})</strong></label> 
  	                <select class="form-control" id="lkpInfoResourceTypeId_{{index}}" name="lkpInfoResourceTypeId_{{index}}" formControlName="lkpInfoResourceTypeId">
-                                <option value="">{{'docTypeLst' | translate:lang }}</option>
+                                <option label="{{'docTypeLst' | translate:lang }}"></option>
                                 <option *ngFor="let lkpInfoResourceTypeId of  lkpInfoResourceTypeIds" [value]="lkpInfoResourceTypeId.id">{{lkpInfoResourceTypeId.name}}</option>
                         </select> 
            </div> 
@@ -21,8 +21,8 @@
      <div class="row">
        <div class="form-group">
           <div class="col-md-6 pull-left">          
-                <label for="infoResourceTitle_{{index}}" class="required"><span class="field-name">{{'docTitle' | translate:lang }}</span> <strong class="required">({{'docRequired' | translate:lang }})</strong></label>
-                <textarea class="form-control" id="infoResourceTitle_{{index}}" name="infoResourceTitle_{{index}}" formControlName="infoResourceTitle" placeholder="title" rows="1" cols="20" maxlength="255" required></textarea>
+                <label for="infoResourceTitle_{{index}}" class="required"><span class="field-name">{{'docTitle' | translate:lang }}</span> <strong class="required">({{'required' | translate:lang }})</strong></label>
+                <textarea class="form-control" id="infoResourceTitle_{{index}}" name="infoResourceTitle_{{index}}" formControlName="infoResourceTitle"  rows="1" cols="20" maxlength="255" required></textarea>
           </div>                   
       </div>
     </div>

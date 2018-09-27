@@ -111,7 +111,7 @@ var formUrlRetrieval=this.radarServiceEndPoint + '?uuid=' + this.uuid + '&formId
 	 reset() {
        this.myForm.reset();	 
    }
-   edit()
+  /* edit()
    {
 		var lang = $( "html" ).attr("lang"); 
 		var hostNameUrl="";
@@ -146,5 +146,5 @@ var formUrlRetrieval=this.radarServiceEndPoint + '?uuid=' + this.uuid + '&formId
 		var hostNameUrl="";
 	  var repeatSections=this.consumerFormService.repeatSections;
 			this.consumerFormService.getRestServiceEditData(this.formNameP,this.uuid,this.formId,this.trackId,myForm,repeatSections,lang);                    
-   }
+   }*/
 }

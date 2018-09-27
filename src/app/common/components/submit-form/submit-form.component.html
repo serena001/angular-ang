@@ -1,15 +1,15 @@
 <div [formGroup]="submitFormfrmGrp">  
 
 
-  <div><h2>How to submit your Incident Report for Consumer</h2></div>
+  <div><h2>{{ 'submitFormTitle' | translate:lang }}</h2></div>
                 <div class="form-group"> 
-                         <label for="submitOption" class="required"><span class="field-name">Submit Options </span> <strong class="required">(required)</strong></label>
+                         <label for="submitOption" class="required"><span class="field-name">{{ 'submitOptions' | translate:lang }}</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
                                <select class="form-control" id="submitOption" name="submitOption" formControlName="submitOption" #optionVal (change)="setOption($event,optionVal.value)">
-                                <option value="">Select option</option>
+                                <option label="{{'selectFormOption' | translate:lang }}"></option>
                                 <option *ngFor="let submitOption of  lstSubmitOption" [value]="submitOption.id">{{submitOption.name}}</option>
                         </select>                        
                   </div>  
-                       <div  [hidden]="showOption1"> 
+                  <!--     <div  [hidden]="showOption1"> 
                      	<div>
                           <ol>
                             <li>To pring this Incident Report you must use your browser (Internet Explorer, Google Chrome, etc.) print options</li>
@@ -26,28 +26,28 @@
                             </li>
                           </ol>
                       </div>
-                     </div> 
+                     </div> -->
                 <div  [hidden]="showOption2"> 
                   <ol>
-                      <li>Click the "Proceed to Submit" button below.</li>
-                      <li>The mandatory fields identified on the online form and size limit of 70 Mb will be verified automatically.</li>
-                      <li>You will see a pop up displaying a confirmation that your submission was successful along with the assigned Case Number and Submission Number.</li>
-                      <li>Save the information entered on the online form on your computer once the Case Number and Submission Number are provided. See section on 'How to save' for more details.</li>
+                      <li>{{ 'option2(a)' | translate:lang }}</li>
+                      <li>{{ 'option2(b)' | translate:lang }}</li>
+                      <li>{{ 'option2(c)' | translate:lang }}</li>
+                      <li>{{ 'option2(d)' | translate:lang }}</li>
                   </ol>
                             
     <div class="row"> 
-      <p><br>The Case Number and Submission Number are assigned by health Canada when you submit the form online</p> 
+      <p><br>{{ 'belowOptionMessage' | translate:lang }}</p> 
     </div> 
       <div class="row">         
         <div class="col-md-3 pull-left"> 
             <div class="form-group"> 
-                  <label for="caseNumber"><span class="field-name">Case Number</span></label> 
+                  <label for="caseNumber"><span class="field-name">{{ 'caseNumber' | translate:lang }}</span></label> 
                     <input class="form-control" type="text" id="caseNumber" name="caseNumber" formControlName="caseNumber" value="" readonly="readonly"> 
             </div> 
         </div> 
         <div class="col-md-9 pull-right"> 
           <div class="form-group"> 
-              <label for="submissionNumber"><span class="field-name">Submission Number</span></label> 
+              <label for="submissionNumber"><span class="field-name">{{ 'submissionNumber' | translate:lang }}</span></label> 
                 <input class="form-control" type="text" id="submissionNumber" name="submissionNumber" formControlName="submissionNumber" value="" readonly="readonly"> 
           </div> 
         </div> 
@@ -57,7 +57,7 @@
                 <div class="row">         
         <div class="col-md-3 pull-left"> 
             <div class="form-group"> 
-                  <label for="formIdentifier"><span class="field-name">Form Identifier</span></label> 
+                  <label for="formIdentifier"><span class="field-name">{{ 'formIdentifier' | translate:lang }}</span></label> 
                     <input class="form-control" type="text" id="formIdentifier" name="formIdentifier" formControlName="formIdentifier" value="" readonly="readonly"> 
             </div> 
         </div>  	  

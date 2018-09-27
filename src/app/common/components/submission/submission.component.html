@@ -3,7 +3,7 @@
  <div class="report">
             <div class="row">
                 <div class="col-md-6 pull-left">
-                    <div class="form-group"><label for="lkpCaseTypeId" class="required"><span class="field-name">Food Type</span> <strong class="required">(required)</strong></label>
+                    <div class="form-group"><label for="lkpCaseTypeId" class="required"><span class="field-name">Food Type</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
                           <select class="form-control" id="lkpCaseTypeId" name="lkpCaseTypeId" formControlName="lkpCaseTypeId"  #formTypeVal  (change)="setFoodType($event,formTypeVal.value)">
                                 <option value="">Select Food Type</option>
                                 <option *ngFor="let lstFoodType of  lstFoodTypes" [value]="lstFoodType.id">{{lstFoodType.name}}</option>
@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-md-6 pull-right">
                     <div class="form-group">
-                       <label for="lkpCaseSubtypeId" class="required"><span class="field-name">Food Sub-Type</span> <strong class="required">(required)</strong></label>
+                       <label for="lkpCaseSubtypeId" class="required"><span class="field-name">Food Sub-Type</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
                         <div  [hidden]="showNoValue">
                             <select class="form-control" id="lkpCaseSubtypeId" name="lkpCaseSubtypeId" formControlName="lkpCaseSubtypeId" >
                                 <option value="">Select Food Type</option>

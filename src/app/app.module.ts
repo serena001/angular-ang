@@ -18,14 +18,33 @@ const l10nConfig:L10nConfig={
   },
   translation:{
     providers: [
+      
+
+      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-app-'},
+      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-admin-'},
+      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-affected-person-'},
+      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-affected-persons-'},
+      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-business-contact-'},
+      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-common-'},
       {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-consumer-'},
+      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-contact-common-'},
+      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-claim-of-confidentiality-'},
       {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-document-'},
       {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-documents-'},
-      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-app-'},
       {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-how-to-import-'},
       {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-how-to-save-'},
+      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-incident-'},
+      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-person-contact-'},
+      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-privacy-notice-'},
+      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-product-common-'},
+      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-product-label-'},
+      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-product-'},
       {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-report-'},
-      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-upload-attach-'}
+      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-submit-'},
+      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-submitter-'},
+      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-upload-attach-'},
+      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-where-got-prdct-'}
+
 
     ],
     caching:true,

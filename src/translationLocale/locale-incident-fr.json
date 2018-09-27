@@ -1,0 +1,6 @@
+{
+    "incidentTitle":"Incident - Section 3",
+    "numberAffectedPersons":"Nombre de personnes affectées (accepte uniquement un nombre entre 0 et 999)",
+    "incidentDescription":"Description de l'incident"
+}
+

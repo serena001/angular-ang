@@ -2,7 +2,7 @@
    	 		<h2>Notification Type - Section 1</h2>
    	  		<div class="row">
    				<div class="col-md-6 pull-left">
-    		 		<div class="form-group"><label for="lkpPurposeId" class="required"><span class="field-name">Notification Type</span> <strong class="required">(required)</strong></label>
+    		 		<div class="form-group"><label for="lkpPurposeId" class="required"><span class="field-name">Notification Type</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
     							  <select class="form-control" id="lkpPurposeId" formControlName="lkpPurposeId" required>
                         <option value="">Select Notification Type</option>
                         <option *ngFor="let lstNotificationType of lstNotificationTypes" [value]="lstNotificationType.id">{{lstNotificationType.name}}</option>
@@ -12,12 +12,12 @@
 				<div class="col-md-6 pull-right">
 					<div class="form-group"><label for="regulatoryIdentifier"><span class="field-name">Cosmetic Number (one to seven-digit number)</span></label>
             			<input class="form-control" id="regulatoryIdentifier" name="regulatoryIdentifier" formControlName="regulatoryIdentifier" type="text"
-            				placeholder="ex.0002654" data-rule-digits="true" maxlength="7" onkeypress="return noEnter(event)"/>
+            				 data-rule-digits="true" maxlength="7" onkeypress="return noEnter(event)"/>
         			</div>					
    				</div>
      		</div>	     
     </div>
     <!--<div class="form-group" /**ng-show="report.lkpPurposeId==545622 || report.lkpPurposeId==545625"><label for="regulatoryIdentifier"><span class="field-name">Cosmetic Number (one to seven-digit number)</span></label>
             			<input class="form-control" id="regulatoryIdentifier" name="regulatoryIdentifier" formControlName="regulatoryIdentifier" type="text"
-            				placeholder="ex.0002654" data-rule-digits="true" maxlength="7" onkeypress="return noEnter(event)"/>
+            				 data-rule-digits="true" maxlength="7" onkeypress="return noEnter(event)"/>
         			</div>	-->

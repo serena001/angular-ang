@@ -1,7 +1,7 @@
 {
-"docFilename":"FilenameF",
-"docType":"Document TypeF",
-"docTypeLst":"Document TypeF",
-"docRequired":"requiredF",
-"docTitle":"TitleF"
+"docFilename":"Nom du fichier",
+"docType":"Type de document",
+"docTypeLst":"Type de document",
+"docRequired":"obligatoire",
+"docTitle":"Titre"
 }

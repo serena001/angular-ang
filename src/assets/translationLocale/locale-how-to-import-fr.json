@@ -1,9 +1,9 @@
 {
-"titleHowToImport" : "How to view/edit your previous Incident Report for Consumer (fr)", 
-"panelTitleHowToImport" : "Viewing or editing a previously saved Incident Report for Consumer(fr)",
-"howToImportBullet1" : "From a blank form webpage (use F5/refresh to clear current form and refresh the page)(fr)",
-"howToImportBullet2" : "Use 'Browse/Choose File' button on webpage to select previously saved .hcxs file.(fr)",
-"howToImportBullet3" : "Directly below, click on the 'Upload Information' button.(fr)",
-"howToImportBullet4" : "Previously saved information will be loaded into form.(fr)",
-"howToImportBullet5" : "Edit, save and submit the information as desired.(fr)"
+"titleHowToImport" : "Comment consulter ou modifier un Rapport d'incident pour consommateur préalablement sauvegardé - Section 11", 
+"panelTitleHowToImport" : "Consulter ou modifier les renseignements d'un Rapport d'incident pour consommateur préalablement sauvegardé",
+"howToImportBullet1" : "À partir d'un formulaire vierge de la page Web (tapez F5 ou Actualiser pour vider le formulaire et rafraîchir la page).",
+"howToImportBullet2" : "À l'aide du bouton « Parcourir/Choisir un fichier » sur la page Web, choisissez la version déjà sauvegardée du fichier .hcxs.",
+"howToImportBullet3" : "Directement en dessous, cliquez sur le bouton « Télécharger les renseignements ».",
+"howToImportBullet4" : "Les renseignements déjà sauvegardés seront téléchargés dans le formulaire.",
+"howToImportBullet5" : "Modifiez, sauvegardez et soumettez les renseignements au besoin."
 }

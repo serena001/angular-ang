@@ -1,0 +1,6 @@
+{
+    "whereGotPrdctTitle":"Where you got the Product - Section 6",
+    "acquiredProductDate":"When was the product acquired (may be approximate)",
+    "contactContextId":"Relationship to injured / involved person",
+    "lkpContactContextIdOption":"Select from whom you got the product"
+ }

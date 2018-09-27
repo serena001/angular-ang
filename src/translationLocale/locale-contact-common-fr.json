@@ -1,0 +1,13 @@
+{
+    "address":"Adresse (numéro et rue)",
+    "city":"Ville",
+    "postalCode":"Code postal",
+    "country":"Pays",
+    "otherCountry":"Autre pays",
+    "province":"Province",
+    "state":"État",
+    "region":"Région",
+    "email":"Courriel",
+    "telephone":"Nº de téléphone (inclure l'indicatif régional)",
+    "fax":"Nº de télécopieur (inclure l'indicatif régional)"
+}

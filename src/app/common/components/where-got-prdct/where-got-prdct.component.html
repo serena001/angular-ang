@@ -1,19 +1,18 @@
   
     <div [formGroup]="whereGotPrdctFormGrp">
-       <div id="section6"><h2>Where you got the Product</h2></div>
-            <p><small>If you are not the manufacturer or importer, you must notify the person from whom you received the product, of this incident, within 2 days. <abbr title="Canada Consumer Product Safety Act ">CCPSA</abbr> 14(2).</small></p>
+       <div id="section6"><h2>{{'whereGotPrdctTitle' | translate:lang }}</h2></div>
             <div class="row">
                 <div class="col-md-6 pull-left">
-                    <div class="form-group"><label for="acquiredProductDate{{sectionName}}{{formName}}{{index}}"><span class="field-name">When was the product acquired (may be approximate) </span><span class="datepicker-format">(<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+                    <div class="form-group"><label for="acquiredProductDate{{sectionName}}{{formName}}{{index}}"><span class="field-name">{{'acquiredProductDate' | translate:lang }}</span><span class="datepicker-format">(<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
                          <input class="form-control" id="acquiredProductDate{{sectionName}}{{formName}}{{index}}" name="acquiredProductDate{{sectionName}}{{formName}}{{index}}" 
                                 formControlName="acquiredProductDate" hcform-datepicker 
                                 type="date"  data-rule-dateISO="true"  onkeypress="return noEnter(event)"/>
                     </div>
                 </div>
                 <div class="col-md-6 pull-right">
-                    <div class="form-group"><label for="lkpContactContextId{{sectionName}}{{formName}}{{index}}"><span class="field-name">Relationship to injured / involved person</span></label>
+                    <div class="form-group"><label for="lkpContactContextId{{sectionName}}{{formName}}{{index}}"><span class="field-name">{{'contactContextId' | translate:lang }}</span></label>
                           <select class="form-control" id="lkpContactContextId{{sectionName}}{{formName}}{{index}}" name="lkpContactContextId{{sectionName}}{{formName}}{{index}}" formControlName="lkpContactContextId">
-                                  <option value="">Select from whom you got the product</option>
+                                  <option label="{{'lkpContactContextIdOption' | translate:lang }}"></option>
                                   <option *ngFor="let productFromWhom of  lstProductFromWhom" [value]="productFromWhom.id">{{productFromWhom.name}}</option>
                           </select>                   
                     </div>

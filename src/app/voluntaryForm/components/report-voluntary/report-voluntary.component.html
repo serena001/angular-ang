@@ -2,7 +2,7 @@
             <h2>Report</h2>            
             <div class="row">
                 <div class="col-md-6 pull-left">
-                     <div class="form-group"><label for="lkpCaseTypeId" class="required"><span class="field-name">Product Type</span> <strong class="required">(required)</strong></label>
+                     <div class="form-group"><label for="lkpCaseTypeId" class="required"><span class="field-name">Product Type</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
                             <select class="form-control" id="lkpCaseTypeId" name="lkpCaseTypeId"  formControlName="lkpCaseTypeId" required>
                                    	<option value="">Select Product Type</option>
                                   <!--  <option *ngFor="let lstProductType of lstProductTypes" [value]="lstProductType.id">{{lstProductType.name}}</option>-->
@@ -12,7 +12,7 @@
                  <div class="col-md-6 pull-right">
                       <div class="form-group"><label for="submitterFileNumber"><span class="field-name">Reporter File Number</span></label>
 	                       <textarea class="form-control word-wrap " name="submitterFileNumber" formControlName="submitterFileNumber" 
-	                              placeholder="Reporter File Number" rows="1" cols="60" maxlength="60">
+	                               rows="1" cols="60" maxlength="60">
 	                       </textarea>	                                             
                       </div>  
                  </div>               

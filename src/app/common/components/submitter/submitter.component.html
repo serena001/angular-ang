@@ -1,10 +1,10 @@
  <div [formGroup]="submitterFrmGrp">
-        <h2>Who is reporting</h2>
+        <h2>{{'submitterTitle' | translate:lang }}</h2>
          <div class="row">          	
                 <div class="col-md-6 pull-left">
-                        <div class="form-group"><label for="lkpReltnshpAffctdPrsnId{{sectionName}}{{formName}}{{index}}"><span class="field-name">Relationship to injured / involved person</span></label>
+                        <div class="form-group"><label for="lkpReltnshpAffctdPrsnId{{sectionName}}{{formName}}{{index}}"><span class="field-name">{{'lkpReltnshpAffctdPrsnId' | translate:lang }}</span></label>
                                 <select class="form-control" id="lkpReltnshpAffctdPrsnId{{sectionName}}{{formName}}{{index}}" name="lkpReltnshpAffctdPrsnId{{sectionName}}{{formName}}{{index}}" formControlName="lkpReltnshpAffctdPrsnId" >
-                                        <option value="">Select Relationship to injured / involved persons</option>
+                                        <option label="{{'lkpReltnshpAffctdPrsnIdOption' | translate:lang }}"></option>
                                         <option *ngFor="let lkpReltnshpAffctdPrsnId of  lkpReltnshpAffctdPrsnIds" [value]="lkpReltnshpAffctdPrsnId.id">{{lkpReltnshpAffctdPrsnId.name}}</option>
                                 </select>                   
                         </div>

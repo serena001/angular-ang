@@ -1,15 +1,15 @@
 {
-"titleDocuments" : "Documents and Pictures(fr)",
-"titlePanel" :"DOCUMENTS(fr)",
-"attachDoc" : "Attaching a document(fr)",
-"attachDocBullet1" :"Click on the 'Browse'/'Choose Files' button to select one or many documents.(fr)",
-"attachDocBullet2" : "Give each document a title and select a document type from the drop-down list.(fr)",
-"docSize" : "Document size:(fr)",
-"docSizeBullet1" : "The size of the individual document attached to the online form will be tallied and cannot exceed a total size of 70Mb(fr)",
-"docAccept" : "Documents that are not accepted:(fr)",
-"docAcceptBullet1" : "Some file formats, such as .zip and .exe files, cannot be included on the online form.(fr)",
-"docRemove" : "Removing a document:(fr)",
-"docRemoveBullet1" : "Click on button 'Remove Document' to remove a document from the online form.(fr)",
-"docRemoveBullet2" : "To remove all documents at once, click on the 'Remove All Documents' button.(fr)",
-"uploadButton" : "Select one or many documents(fr)"
+"titleDocuments" : "Documents et images - Section 7",
+"titlePanel" :"Documents",
+"attachDoc" : "Ajouter un document",
+"attachDocBullet1" :"Cliquez sur le bouton « Parcourir » ou « Sélect. fichiers » pour sélectionner un ou plusieurs documents.",
+"attachDocBullet2" : "Veuillez nommer le document de même que sélectionner un type de document du menu déroulant.",
+"docSize" : "Taille du document :",
+"docSizeBullet1" : "La taille cumulative des documents ajoutés ne doit pas excéder 70 Mo.",
+"docAccept" : "Documents qui ne sont pas acceptés :",
+"docAcceptBullet1" : "Certains formats de fichiers tels que .zip et .exe ne peuvent pas être ajoutés au formulaire en ligne.",
+"docRemove" : "Enlever un document :",
+"docRemoveBullet1" : "Cliquez sur le bouton « Enlever document » afin de retirer un document du formulaire en ligne.",
+"docRemoveBullet2" : "Pour retirer tous les documents à la fois, cliquez sur le bouton « Enlever tous les documents ».",
+"uploadButton" : "Sélectionnez un ou plusieurs documents"
 }

@@ -1,0 +1,10 @@
+{
+    "affectedPersonTitle":"Personne affectée",
+    "dateOfIncident":"Date de l'incident (AAAA-MM-JJ)",
+    "gender":"Genre",
+    "ageRange":"Barème d'âge",
+    "incidentType":"Type d'incident",
+    "injuryType":"Type de blessure",
+    "treatment":"Traitement",
+    "bodyPart":"Partie du corps"
+}

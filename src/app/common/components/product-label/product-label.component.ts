@@ -1,12 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
-
+import {Localization,LocaleService,TranslationService,Language} from 'angular-l10n';
+declare var $:any;
 @Component({
   selector: 'app-product-label',
   templateUrl: './product-label.component.html',
   styleUrls: ['./product-label.component.css']
 })
 export class ProductLabelComponent implements OnInit {
+  @Language() lang:string;
   @Input('group')
   public productLabelFrmGrp:FormGroup;
   @Input('index')
@@ -15,9 +17,11 @@ export class ProductLabelComponent implements OnInit {
   public formName:string;
   @Input('sectionName')
   public sectionName:string;
-  constructor() { }
+  constructor(public locale: LocaleService) { }
 
   ngOnInit() {
+    var language = $( "html" ).attr("lang");
+	this.locale.setCurrentLanguage(language);
   }
 
 }

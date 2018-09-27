@@ -1,20 +1,15 @@
   <div [formGroup]="privacyNoticeFrmGrp">
-  <div><h3>Privacy Notice</h3></div> 
-         <div class="form-group"><label for="lkpPersonalInfoReleaseId" class="required"><span class="field-name">I authorize Health Canada to release my personal information to a person or a government that carries out functions relating to the protection of human health or 
-                safety and/or to the supplier of the product so that they may evaluate this incident.</span> <strong class="required">(required)</strong></label> 
+  <div><h3>{{'privacyNoticeTitle' | translate:lang }}</h3></div> 
+         <div class="form-group"><label for="lkpPersonalInfoReleaseId" class="required"><span class="field-name">{{'lkpPersonalInfoReleaseId' | translate:lang }}</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label> 
                       <select class="form-control" id="lkpPersonalInfoReleaseId" name="lkpPersonalInfoReleaseId" formControlName="lkpPersonalInfoReleaseId" required>
-                                        <option value="">Select Yes or No</option>                                     
+                                        <option label="{{'selectOption' | translate:lang }}"></option>                                     
                                         <option *ngFor="let lkpPersonalInfoReleaseId of lstReleaseInfo" [value]="lkpPersonalInfoReleaseId.id">{{lkpPersonalInfoReleaseId.name}}</option>
                                     </select>
          </div> 
          <div class="form-group"> 
-                 <p><small>Under the <abbr title="Canada Consumer Product Safety Act ">CCPSA</abbr> manufacturers, importers and sellers of a consumer product for commercial purposes are required to provide information regarding any incident related to the product. The 
-                 information is being collected for the purpose of assessing and mitigating risks to human health or safety from consumer products. Non-compliance with the provisions of the CCPSA may result in 
-                 prosecution.</small></p> 
-                 <p><small>Some of the information required may be personal information as that term is defined under the <em>Privacy Act</em>. The personal information requested in this submission is collected under the authority of the 
-                 <em>Department of Health Act</em> for the purpose of informing a broad range of Health Canada's activities in relation to promotion and preservation of health, including monitoring trends.</small></p> 
-                 <p><small>Personal information that you provide is protected under the provisions of the <em>Privacy Act</em> which also authorizes the disclosure of personal information in certain circumstances. The <em>Privacy Act</em> gives 
-                 you the right to access and/or to correct your personal information. The personal information and its use is described in Info Source under the Standard Personal Information Bank "Branch Incident 
-                 Reporting System" (HC PPU 088).</small></p>                         
+                 <p><small>{{'paragraphA' | translate:lang }} <abbr title="{{'paragraphAbbr ">{{'paragraphText' | translate:lang }}</abbr> {{'paragraphB' | translate:lang }}</small></p> 
+                 <p><small>{{'paragraphC' | translate:lang }} <em>{{'paragraphCEm' | translate:lang }}</em>{{'paragraphD' | translate:lang }} 
+                 <em>{{'paragraphDEm' | translate:lang }}</em> {{'paragraphE' | translate:lang }}</small></p> 
+                 <p><small>{{'paragraphF' | translate:lang }}<em>{{'paragraphCEm' | translate:lang }}</em> {{'paragraphG' | translate:lang }}<em>{{'paragraphCEm' | translate:lang }}</em> {{'paragraphH' | translate:lang }}</small></p>                         
           </div> 
   </div>
