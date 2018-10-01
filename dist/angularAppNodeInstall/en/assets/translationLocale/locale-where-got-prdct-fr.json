@@ -1,0 +1,6 @@
+{
+    "whereGotPrdctTitle":"Endroit où vous avez obtenu le produit - Section 6",
+    "acquiredProductDate":"À quelle date avez-vous obtenu le produit (approximative, s'il y a lieu) ",
+    "contactContextId":"De qui avez-vous obtenu le produit",
+    "lkpContactContextIdOption":"Sélectionnez de qui avez-vous obtenu le produit"
+ }

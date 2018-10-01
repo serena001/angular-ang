@@ -1,0 +1,14 @@
+{
+    "titleHowToSave" : "Comment sauvegarder votre Rapport d'incident pour consommateur - Section 10", 
+    "panelTitleHowToSave" : "Sauvegarder les renseignements de votre Rapport d'incident pour consommateur",
+    "paragraphHowToSave"  : "Avant de sauvegarder, veuillez noter ce qui suit :",
+    "paragraphHowToSaveBullet1"  : "Vous devez sauvegarder une copie de votre formulaire. Vous aurez besoin de cette copie pour faire une mise à jour, une modification ou un rapport final.",
+    "paragraphHowToSaveBullet2"  : "Comme vous devez utiliser le numéro de cas et de soumission lorsque vous communiquez avec Santé Canada à propos de votre dossier, il serait préférable d'inclure un de ces numéros ou les deux dans le nom du dossier lorsque vous sauvegardez votre formulaire.",
+    "howToSaveBullet1" : "Pour les utilisateurs de PC : Cliquez à droite sur l'icône Sauvegarder mon formulaire.",
+    "howToSaveBullet1Cont" : "Save My FormF",
+    "howToSaveBullet2" : "Pour les utilisateurs de Mac : maintenez enfoncées les touches CMD ou CTRL et cliquez sur l'icône Sauvegarder mon formulaire.",
+    "howToSaveBullet2Cont" : "Save My FormF",
+    "howToSaveBullet3" : "À partir du menu contextuel ou de la liste déroulante, cliquez ou sélectionnez « Enregistrer sous ou Enregistrer le lien sous ».",
+    "howToSaveBullet4" : "Previously saved information will be loaded into form.F",
+    "howToSaveBullet5" : "En choisissant l'emplacement sur votre ordinateur, choisissez un dossier que vous retrouverez facilement."
+}

@@ -1,0 +1,9 @@
+{
+    "required"  : "required",
+    "lstCountryOption":"Select a country",
+    "lstProvinceOption":"Select province or territory",
+    "lstStateOption":"Select state",
+    "charactersRemain":"Characters remaining:",
+    "yesMsg":"yes",
+    "noMsg":"no"
+}
