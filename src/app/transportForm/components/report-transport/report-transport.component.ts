@@ -1,6 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 import { ReportService } from '../../../common/services/report.service';
+import {Localization,LocaleService,TranslationService,Language} from 'angular-l10n';
 
 @Component({
   selector: 'app-report-transport',
@@ -11,6 +12,7 @@ export class ReportTransportComponent implements OnInit {
 @Input('group')
 public reportFormGrp:FormGroup;
 lstPrograms;
+@Language() lang:string;
 constructor(private _fb:FormBuilder, private reportService:ReportService) { }
 
   ngOnInit() {

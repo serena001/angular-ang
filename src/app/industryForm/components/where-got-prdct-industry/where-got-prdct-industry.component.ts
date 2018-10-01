@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 import { WhereGotPrdctService } from '../../../common/services/where-got-prdct.service';
 import { SubmitterService } from '../../../common/services/submitter.service';
-
+import {Localization,LocaleService,TranslationService,Language} from 'angular-l10n';
 @Component({
   selector: 'app-where-got-prdct-industry',
   templateUrl: './where-got-prdct-industry.component.html',
@@ -17,7 +17,7 @@ public index:string;
 public formName:string;
 @Input('sectionName')
 public sectionName:string;
-
+@Language() lang:string;
   constructor(private whereGotPrdctService: WhereGotPrdctService,private submitterService:SubmitterService) { }
  lstProductFromWhom;
   ngOnInit() {

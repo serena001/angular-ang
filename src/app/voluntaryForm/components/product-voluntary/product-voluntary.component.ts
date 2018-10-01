@@ -1,6 +1,6 @@
 import { Component, OnInit,Input} from '@angular/core';
 import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
-
+import {Localization,LocaleService,TranslationService,Language} from 'angular-l10n';
 @Component({
   selector: 'app-product-voluntary',
   templateUrl: './product-voluntary.component.html',
@@ -20,6 +20,7 @@ export class ProductVoluntaryComponent implements OnInit {
   @Input('sectionName')
   public sectionName:string;
   lkpContactContextIds;
+  @Language() lang:string;
   constructor() { }
 
   ngOnInit() {

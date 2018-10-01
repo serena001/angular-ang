@@ -14,6 +14,7 @@ import { IncidentService } from '../../common/services/incident.service';
 import { MeasureService } from '../../common/services/measure.service';
 import { ProceedToSubmitFormService } from '../../common/services/proceed-to-submit-form.service';
 import { TransportFormService } from '../services/transport-form.service';
+import {Localization,LocaleService,TranslationService,Language} from 'angular-l10n';
 declare var $:any;
 @Component({
   selector: 'app-transport-form',
@@ -33,6 +34,7 @@ nameSpace;
 externalServiceEndPoint;
 radarServiceEndPoint;
 	public myForm:FormGroup;
+	@Language() lang:string;
 	constructor
 	(
 		private _fb: FormBuilder,

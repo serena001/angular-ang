@@ -10,7 +10,7 @@ import { SubmitFormService } from '../../common/services/submit-form.service';
 import { ContactsService } from '../../common/services/contacts.service';
 import { ProceedToSubmitFormService } from '../../common/services/proceed-to-submit-form.service';
 import { FoodFormService } from '../services/food-form.service';
-
+import {Localization,LocaleService,TranslationService,Language} from 'angular-l10n';
 declare var $:any;
 
 @Component({
@@ -33,6 +33,7 @@ nameSpace;
 externalServiceEndPoint;
 radarServiceEndPoint;
 	public myForm:FormGroup;
+	@Language() lang:string;
 	constructor
 	(
 		private _fb: FormBuilder,

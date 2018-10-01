@@ -1,5 +1,6 @@
 import { Component, OnInit,Input} from '@angular/core';
 import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
+import {Localization,LocaleService,TranslationService,Language} from 'angular-l10n';
 
 @Component({
   selector: 'app-retailer-voluntary',
@@ -15,6 +16,7 @@ export class RetailerVoluntaryComponent implements OnInit {
   public formName:string;
   @Input('sectionName')
   public sectionName:string;
+  @Language() lang:string;
   constructor() { }
 
   ngOnInit() {

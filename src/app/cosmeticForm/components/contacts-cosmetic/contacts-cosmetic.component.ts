@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 import { ContactService } from '../../../common/services/contact.service';
+import {Localization,LocaleService,TranslationService,Language} from 'angular-l10n';
 @Component({
   selector: 'app-contacts-cosmetic',
   templateUrl: './contacts-cosmetic.component.html',
@@ -15,6 +16,7 @@ public formName:string;
 public sectionName:string;
 @Input('index')
 public index:string;
+@Language() lang:string;
   constructor(private _fb: FormBuilder) { }
 
   ngOnInit() {

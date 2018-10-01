@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
-
+import {Localization,LocaleService,TranslationService,Language} from 'angular-l10n';
 @Component({
   selector: 'app-other-products',
   templateUrl: './other-products.component.html',
@@ -9,6 +9,7 @@ import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 export class OtherProductsComponent implements OnInit {
 @Input('group')
 public otherProductsFrmGrp:FormGroup;
+@Language() lang:string;
   constructor(private _fb: FormBuilder) { }
   ngOnInit() {
   }

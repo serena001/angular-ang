@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 import { SubmitterService } from '../../../common/services/submitter.service';
-
+import {Localization,LocaleService,TranslationService,Language} from 'angular-l10n';
 @Component({
   selector: 'app-submitter-food',
   templateUrl: './submitter-food.component.html',
@@ -16,7 +16,7 @@ export class SubmitterFoodComponent implements OnInit {
   public formName:string;
   @Input('sectionName')
   public sectionName:string;
-
+  @Language() lang:string;
   constructor(private _fb:FormBuilder, private submitterService: SubmitterService) {} 
     lkpReltnshpAffctdPrsnIds;
 lkpContactContextIds;

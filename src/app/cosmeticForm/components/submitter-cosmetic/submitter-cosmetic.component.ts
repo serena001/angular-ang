@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 import { SubmitterService } from '../../../common/services/submitter.service';
-
+import {Localization,LocaleService,TranslationService,Language} from 'angular-l10n';
 @Component({
   selector: 'app-submitter-cosmetic',
   templateUrl: './submitter-cosmetic.component.html',
@@ -16,6 +16,7 @@ export class SubmitterCosmeticComponent implements OnInit {
   public formName:string;
  @Input('sectionName')
  public sectionName:string;
+ @Language() lang:string;
   constructor() { }
 
   ngOnInit() {

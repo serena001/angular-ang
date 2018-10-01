@@ -4,6 +4,7 @@ import { UserFormServiceService } from '../services/user-form-service.service';
 import { KeycloakRestService } from '../services/keycloak-rest.service';
 import { UserFormRetrieveInformationService } from '../services/user-form-retrieve-information.service';
 import { ProcessFormService } from '../services/process-form.service';
+import {Localization,LocaleService,TranslationService,Language} from 'angular-l10n';
 declare var $:any;
 @Component({
   selector: 'app-user-form',
@@ -12,6 +13,7 @@ declare var $:any;
 })
 export class UserFormComponent implements OnInit {
 public myForm:FormGroup;
+@Language() lang:string;
   constructor(
     private _fb: FormBuilder,		
     private userFormServiceService:UserFormServiceService,

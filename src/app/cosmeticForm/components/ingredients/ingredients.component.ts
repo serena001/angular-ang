@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 import { IngredientService } from '../../../common/services/ingredient.service';
-
+import {Localization,LocaleService,TranslationService,Language} from 'angular-l10n';
 @Component({
   selector: 'app-ingredients',
   templateUrl: './ingredients.component.html',
@@ -12,6 +12,7 @@ export class IngredientsComponent implements OnInit {
 public ingredientsFrmGrp:FormGroup;
 @Input('formName')
 public formName:string;
+@Language() lang:string;
 
   constructor(private _fb: FormBuilder,private ingredientService:IngredientService) { }
   ngOnInit() {
