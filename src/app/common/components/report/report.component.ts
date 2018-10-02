@@ -33,27 +33,35 @@ showCase=true;
   ngOnInit() {
     var lang = $( "html" ).attr("lang");
     this.locale.setCurrentLanguage(lang);
-    var drpDownRestEndpoint=this.restServiceEndpointsService.endpointDefaults.drpDownServiceEndPoint;
-    drpDownRestEndpoint=drpDownRestEndpoint+"?lang="+lang;
-    this.reportService.getLstProductTypes().then(lstProductTypes => this.lstProductTypes = lstProductTypes);
-    this.reportService.getLstReportPurposes().then(lstReportPurposes => this.lstReportPurposes = lstReportPurposes);      
- this.retrieveDrpDownRestServiceService.getDrpDownInformation(drpDownRestEndpoint).subscribe(data =>this.formatRestData(data,"lstReportTypes"));
-if(this.lstReportTypes=="" || this.lstReportTypes==undefined)
- { this.reportService.getLstReportTypes(lang).then(data => this.formatRestData(data,"lstReportTypes")); }
+
+    let drpDownlstReportTypesRestEndpoint=this.restServiceEndpointsService.endpointDefaults.drpDownLstReportTypes;
+    drpDownlstReportTypesRestEndpoint=drpDownlstReportTypesRestEndpoint+"?lang="+lang;
+    let drpDownLstProductTypesRestEndpoint=this.restServiceEndpointsService.endpointDefaults.drpDownLstProductTypes;
+    drpDownLstProductTypesRestEndpoint=drpDownLstProductTypesRestEndpoint+"?lang="+lang;
+    this.retrieveDrpDownRestServiceService.getDrpDownInformation(drpDownlstReportTypesRestEndpoint).subscribe(data =>this.formatRestData(data,"lstReportTypes"));
+    this.retrieveDrpDownRestServiceService.getDrpDownInformation(drpDownLstProductTypesRestEndpoint).subscribe(data =>this.formatRestData(data,"lstProductTypes"));
   }
  formatRestData(data,drpDownName)
  {
-  var jsonDoc=data;
-  console.log("ddd" + JSON.stringify(jsonDoc));
-  var jsonDocParent=jsonDoc[drpDownName];
-  if(jsonDocParent==undefined){
-    this.lstReportTypes =jsonDocParent;
-  }
-  else
-  {
-    this.lstReportTypes =jsonDocParent[drpDownName];
-  }
-  
+    let jsonDoc=data;
+    let jsonDocParent=jsonDoc[drpDownName];
+    let jsonDocParentVal;
+    if(jsonDocParent==undefined)
+    {
+      jsonDocParentVal=jsonDocParent;
+    }
+    else{
+      jsonDocParentVal=jsonDocParent[drpDownName];
+    }
+    if(drpDownName=="lstReportTypes")
+    {
+      this.lstReportTypes =jsonDocParentVal;
+    }
+    else if(drpDownName=="lstProductTypes")
+    {
+      this.lstProductTypes =jsonDocParentVal;
+    }
+   
  }
 setCaseNo($event,value)
 	{	
