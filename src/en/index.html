@@ -74,7 +74,7 @@
 					titleVar="aucueil";
 					titleNextVar="Sante";
 					hrefUrl=hrefUrl.replace("Fr","En");
-					hrefUrl=hrefUrl.replace("fr","en");
+					hrefUrl=hrefUrl.replace("/fr/","/en/");
 
 				}
 				else if (formLangHtml=="en"){
@@ -85,7 +85,7 @@
 					titleVar="home";
 					titleNextVar="health";
 					hrefUrl=hrefUrl.replace("En","Fr");
-					hrefUrl=hrefUrl.replace("en","fr");
+					hrefUrl=hrefUrl.replace("/en/","/fr/");
 
 				}
 							defTop.outerHTML = wet.builder.top({

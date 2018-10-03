@@ -83,7 +83,7 @@ var formData=myFormCopy;
 					.pipe(
                     map(this.extractData),
 					catchError(this.handleError));*/
-					var jsonArray={"form":{"formLang":512051,"formIdentifier":"CPS-SPC-0006.08","assignCaseNo":"2017-001249","submissionNo":"2017-03-23-000001"}};
+					var jsonArray={"formLang":512051,"formIdentifier":"CPS-SPC-0006.08","caseNumber":"2017-001249","submissionNumber":"2017-03-23-000001"};
 					return of(jsonArray).pipe(map(o => o));
   }  
  
@@ -145,9 +145,19 @@ save(myForm:FormGroup,formIdentifier,formEnvironment,nameSpace,serviceEndPoint)
 	processExternServiceResponse(data:any,myForm:any)
   	{	console.log(data);
 		var control = <FormGroup>myForm.controls["submitForm"];		
-		var caseNumber=data.form.caseNumber;
-		var submissionNumber=data.form.submissionNumber;
-		var message="Confirmation: Online submission was successful. Assigned Case Number(s) is/are: " + caseNumber + " and assigned Submission Number is: " + submissionNumber + ".";	
+		var caseNumber=data.caseNumber;
+		var submissionNumber=data.submissionNumber;
+		let lang = $( "html" ).attr("lang"); 
+		let message;
+		if(lang=="en")
+		{
+			message="Confirmation: Online submission was successful. Assigned Case Number(s) is/are: " + caseNumber + " and assigned Submission Number is: " + submissionNumber + ".";	
+		}
+		else if(lang="fr")
+		{
+			message="Confirmation : La soumission en ligne est un succès. Le(s) numero de cas attribué(s) est ou sont : " + caseNumber + " et le numero de soumission attribué est : " + submissionNumber + ".";	
+		}
+		
 		$(".messageTitle").html("Message");
         $(".messageBody").html(message);		
 		$("#messageDialogueNoBtn").trigger("open.wb-lbx", [ [ { src: "#messageDialogueNoBtn", type: "inline" } ] ,true]);		
