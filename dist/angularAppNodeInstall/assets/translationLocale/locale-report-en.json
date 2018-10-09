@@ -1,0 +1,9 @@
+{
+     "reportType" : "Report Type",
+ "productType" : "Product Type",
+  "caseNumber" : "Case Number",
+ "required"  : "required" ,
+ "report"  :  "Report",
+"selectProductType"  :  "Select Product Type",
+"selectReportType"  :  "Select Report Type"
+}

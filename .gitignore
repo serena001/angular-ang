@@ -37,3 +37,13 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#wet4
+/dist/angularAppNodeInstall/ajax
+/dist/angularAppNodeInstall/assets
+/dist/angularAppNodeInstall/cdts
+/dist/angularAppNodeInstall/css
+/dist/angularAppNodeInstall/fonts
+/dist/angularAppNodeInstall/img
+/dist/angularAppNodeInstall/js
+
