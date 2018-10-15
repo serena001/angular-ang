@@ -21,11 +21,12 @@ submitFormDefaults=
       // "externalServiceEndPoint": "https://hcxs.hc-sc.gc.ca/external/services/rest/submitXMLForm",      
       // "radarServiceEndPoint": "http://10.224.4.20:20130/external/services/rest/submitXMLForm",
       "radarServiceEndPoint": "http://localhost:8083/JsonObjectDocRetrieval1",
-       "externalServiceEndPoint": "/save",
+       "externalServiceEndPoint": "http://localhost:8086/formSubmit",
      //  "defaultIndexHtmlUrlEn": "http://localhost:8083/dist/en/index.html",
 		  "defaultIndexHtmlUrlEn": "http://localhost:8082/dist/en/index.html",
        "defaultIndexHtmlUrlFr": "http://localhost:8082/dist/fr/index.html",
-       "serviceEndpointEdit" :"/edit"
+			 "serviceEndpointEdit" :"/edit",
+			 "formType":"consumer"
   }
 
 	 repeatSections=[{"parent":"documents", "objectPath":"documents.document", "child":"'document'", "defaultValue":"this.documentService.ngInitDefaultValueNoFormGroup"},
@@ -51,16 +52,15 @@ submitFormDefaults=
     return body;
   }
 
-  private handleError (error: Response | any) {
-    // In a real world app, we might use a remote logging infrastructure
-    let errMsg: string;
-    if (error instanceof Response) {
-      const body = error.json() || '';
-      const err = body.error || JSON.stringify(body);
-      errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
-    } else {
-      errMsg = error.message ? error.message : error.toString(); 
+	private handleError (errorResp: Response | any) {
+
+    let errorMsg: string;
+    if (errorResp instanceof Response) {
+      const bodyResponse = errorResp.json();
+      const errMessage = bodyResponse.error || JSON.stringify(bodyResponse);
+      errorMsg = `${errMessage}`;
     }
+    return Observable.throw(errorMsg);
   }
 
    getRestServiceEditData(formNameP,uuid,formId,trackId,myForm,repeatSections,lang)

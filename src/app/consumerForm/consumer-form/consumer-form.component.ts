@@ -94,7 +94,7 @@ radarServiceEndPoint;
 this.formIdentifier=this.consumerFormService.submitFormDefaults.formIdentifier;
 this.formEnvironment=this.consumerFormService.submitFormDefaults.formEnvironment;
 this.nameSpace=this.consumerFormService.submitFormDefaults.nameSpace;
-this.externalServiceEndPoint=this.consumerFormService.submitFormDefaults.externalServiceEndPoint;
+this.externalServiceEndPoint=this.consumerFormService.submitFormDefaults.externalServiceEndPoint + '?form=' + this.consumerFormService.submitFormDefaults.formType;
 this.radarServiceEndPoint=this.consumerFormService.submitFormDefaults.radarServiceEndPoint;
 			//this.formService.retrieveFormInformation(this.myForm);
 var formUrlRetrieval=this.radarServiceEndPoint + '?uuid=' + this.uuid + '&formId=' + this.formId + '&trackId=' +this.trackId+'&lang='+lang;
@@ -111,40 +111,5 @@ var formUrlRetrieval=this.radarServiceEndPoint + '?uuid=' + this.uuid + '&formId
 	 reset() {
        this.myForm.reset();	 
    }
-  /* edit()
-   {
-		var lang = $( "html" ).attr("lang"); 
-		var hostNameUrl="";
-		if(lang=="en")
-		{
-			hostNameUrl=this.consumerFormService.submitFormDefaults.defaultIndexHtmlUrlEn;
-			location.href=hostNameUrl+"?formNameP=" + this.formNameP + "&uuid=" + this.uuid + "&formId=" + this.formId + "&trackId=" + this.trackId;
-		} 
-		else if(lang=="fr")
-		{
-			hostNameUrl=this.consumerFormService.submitFormDefaults.defaultIndexHtmlUrlFr;
-			location.href=hostNameUrl+"?formNameP=" + this.formNameP + "&uuid=" + this.uuid + "&formId=" + this.formId + "&trackId=" + this.trackId;
-		}	   
-   }
-    editDefaulVal()
-   {
-		var lang = $( "html" ).attr("lang"); 
-		var hostNameUrl="";
-		if(lang=="en")
-		{
-			hostNameUrl=this.consumerFormService.submitFormDefaults.defaultIndexHtmlUrlEn;
-			location.href=hostNameUrl+"?formNameP=" + this.formNameP + "&uuid=4&formId=8&trackId=6";
-		} 
-		else if(lang=="fr")
-		{
-			hostNameUrl=this.consumerFormService.submitFormDefaults.defaultIndexHtmlUrlFr;
-			location.href=hostNameUrl+"?formNameP=" + this.formNameP + "&uuid=4&formId=8&trackId=6";
-		}	   
-   }
-   editSB(myForm:FormGroup)
-   {var lang = $( "html" ).attr("lang"); 
-		var hostNameUrl="";
-	  var repeatSections=this.consumerFormService.repeatSections;
-			this.consumerFormService.getRestServiceEditData(this.formNameP,this.uuid,this.formId,this.trackId,myForm,repeatSections,lang);                    
-   }*/
+  
 }

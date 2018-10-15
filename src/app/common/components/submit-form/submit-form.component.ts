@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 import { SubmitFormService } from '../../services/submit-form.service';
+import {RestServiceEndpointsService } from '../../services/rest-service-endpoints.service';
+import {RetrieveDrpDownRestServiceService } from '../../services/retrieve-drp-down-rest-service.service';
 import {Localization,LocaleService,TranslationService,Language} from 'angular-l10n';
 declare var $:any;
 @Component({
@@ -15,6 +17,8 @@ public submitFormfrmGrp:FormGroup
   lstSubmitOption;
   constructor(
 		private submitFormService: SubmitFormService,
+		public restServiceEndpointsService:RestServiceEndpointsService,
+    private retrieveDrpDownRestServiceService:RetrieveDrpDownRestServiceService,
 		public locale: LocaleService ) { }
 
    showOption1:boolean=true;
@@ -23,8 +27,31 @@ public submitFormfrmGrp:FormGroup
   ngOnInit() {
 		var language = $( "html" ).attr("lang");
 	this.locale.setCurrentLanguage(language);
-      this.submitFormService.getLstSubmitOption().then(lstSubmitOption => this.lstSubmitOption = lstSubmitOption);
-  }
+			//this.submitFormService.getLstSubmitOption().then(lstSubmitOption => this.lstSubmitOption = lstSubmitOption);
+	let drpDownLstSubmitOptionRestEndpoint=this.restServiceEndpointsService.endpointDefaults.drpDownLstSubmitOptions +"?lang="+language;
+	this.retrieveDrpDownRestServiceService.getDrpDownInformation(drpDownLstSubmitOptionRestEndpoint).subscribe(data =>this.formatRestData(data,"lstSubmitOption"));
+		
+	}
+	formatRestData(data,drpDownName)
+ {
+    let jsonDoc=data;
+    let jsonDocParent=jsonDoc[drpDownName];
+    let jsonDocParentVal;
+    if(jsonDocParent==undefined)
+    {
+      jsonDocParentVal=jsonDocParent;
+    }
+    else{
+      jsonDocParentVal=jsonDocParent[drpDownName];
+    }
+    if(drpDownName=="lstSubmitOption")
+    {
+      this.lstSubmitOption =jsonDocParentVal;
+    }
+  
+   
+ }
+
 setOption($event,value)
 	{	
 

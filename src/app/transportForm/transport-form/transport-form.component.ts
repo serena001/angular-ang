@@ -65,7 +65,7 @@ radarServiceEndPoint;
 this.formIdentifier=this.transportFormService.submitFormDefaults.formIdentifier;
 this.formEnvironment=this.transportFormService.submitFormDefaults.formEnvironment;
 this.nameSpace=this.transportFormService.submitFormDefaults.nameSpace;
-this.externalServiceEndPoint=this.transportFormService.submitFormDefaults.externalServiceEndPoint;
+this.externalServiceEndPoint=this.transportFormService.submitFormDefaults.externalServiceEndPoint + '?form=' + this.transportFormService.submitFormDefaults.formType;
 this.radarServiceEndPoint=this.transportFormService.submitFormDefaults.radarServiceEndPoint;
 			//this.formService.retrieveFormInformation(this.myForm);
 var formUrlRetrieval=this.radarServiceEndPoint + '?uuid=' + this.uuid + '&formId=' + this.formId + '&trackId=' +this.trackId;

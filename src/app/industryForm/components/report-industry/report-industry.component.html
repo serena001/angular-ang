@@ -3,13 +3,8 @@
        
   <app-report [group]="reportFormGrp"></app-report>
         <div class="row">         
-            <div class="col-md-6 pull-left">     
-                    <div class="form-group"><label for="submitterFileNumber"><span class="field-name">Internal Number</span></label>
-                         <input class="form-control" id="submitterFileNumber" name="submitterFileNumber" formControlName="submitterFileNumber" type="text" 
-                                    maxlength="11" onkeypress="return noEnter(event)"/>
-                    </div>                    
-              </div>
-              <div class="col-md-6 pull-right">
+           
+              <div class="col-md-6 pull-left">
                   <div class="form-group"><label for="lkpPurposeId" class="required"><span class="field-name">Purpose of Report</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
                          <select class="form-control" id="lkpPurposeId" name="lkpPurposeId" formControlName="lkpPurposeId">
                                 <option value="">Select Purpose of Report</option>

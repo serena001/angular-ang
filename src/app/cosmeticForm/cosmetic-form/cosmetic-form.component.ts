@@ -82,7 +82,7 @@ radarServiceEndPoint;
 	this.formIdentifier=this.cosmeticFormService.submitFormDefaults.formIdentifier;
 this.formEnvironment=this.cosmeticFormService.submitFormDefaults.formEnvironment;
 this.nameSpace=this.cosmeticFormService.submitFormDefaults.nameSpace;
-this.externalServiceEndPoint=this.cosmeticFormService.submitFormDefaults.externalServiceEndPoint;
+this.externalServiceEndPoint=this.cosmeticFormService.submitFormDefaults.externalServiceEndPoint  + '?form=' + this.cosmeticFormService.submitFormDefaults.formType;
 this.radarServiceEndPoint=this.cosmeticFormService.submitFormDefaults.radarServiceEndPoint;
 			//this.formService.retrieveFormInformation(this.myForm);
 var formUrlRetrieval=this.radarServiceEndPoint + '?uuid=' + this.uuid + '&formId=' + this.formId + '&trackId=' +this.trackId;	

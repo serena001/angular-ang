@@ -3,6 +3,8 @@ import { Validators, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 import { DocumentService } from '../../services/document.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { TranslationLocaleService } from '../../services/translation-locale.service';
+import {RestServiceEndpointsService } from '../../services/rest-service-endpoints.service';
+import {RetrieveDrpDownRestServiceService } from '../../services/retrieve-drp-down-rest-service.service';
 import {Localization,LocaleService,TranslationService,Language} from 'angular-l10n';
 declare function unescape(s:string): string;
 declare var $:any;
@@ -26,8 +28,10 @@ lkpInfoResourceTypeIds;
 	  private documentService: DocumentService,
 	  private _fb: FormBuilder,
 	  private sanitizer: DomSanitizer,
-	  public locale: LocaleService, 
-    	public translation:TranslationService){}
+	  public locale: LocaleService,
+	  public restServiceEndpointsService:RestServiceEndpointsService,
+      private retrieveDrpDownRestServiceService:RetrieveDrpDownRestServiceService, 
+      public translation:TranslationService){}
 	
   ngOnInit() {
 
@@ -35,10 +39,30 @@ lkpInfoResourceTypeIds;
 	this.locale.setCurrentLanguage(language);
 		this.fileName= this.documentFrmGrp.get('fileName').value;
 
-		this.documentService.getLkpInfoResourceTypeIds().then(lkpInfoResourceTypeIds => this.lkpInfoResourceTypeIds = lkpInfoResourceTypeIds);
+		//this.documentService.getLkpInfoResourceTypeIds().then(lkpInfoResourceTypeIds => this.lkpInfoResourceTypeIds = lkpInfoResourceTypeIds);
+		let drpDownLkpInfoResourceTypeIdsRestEndpoint=this.restServiceEndpointsService.endpointDefaults.drpDownLkpInfoResourceTypeIds +"?lang="+language;
+		this.retrieveDrpDownRestServiceService.getDrpDownInformation(drpDownLkpInfoResourceTypeIdsRestEndpoint).subscribe(data =>this.formatRestData(data,"lkpInfoResourceTypeIds"));
+	  
+  }
+  formatRestData(data,drpDownName)
+  {
+	 let jsonDoc=data;
+	 let jsonDocParent=jsonDoc[drpDownName];
+	 let jsonDocParentVal;
+	 if(jsonDocParent==undefined)
+	 {
+	   jsonDocParentVal=jsonDocParent;
+	 }
+	 else{
+	   jsonDocParentVal=jsonDocParent[drpDownName];
+	 }
+	 if(drpDownName=="lkpInfoResourceTypeIds")
+	 {
+	   this.lkpInfoResourceTypeIds =jsonDocParentVal;
+	 }
 
   }
-	
+ 
    public downloadFileFirefox()
   {	
 		var href:any;
