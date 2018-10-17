@@ -1,11 +1,10 @@
  <div   [formGroup]="adminFrmGrp">
        <div class="row">
-        <h2>Administrative information</h2>
-		    <p>Health Canada invites you to  <a id="subscribe_link" href="http://www.hc-sc.gc.ca/cps-spc/advisories-avis/_subscribe-abonnement/index-eng.php" title="Subscribe to our consumer product safety newsletter. (external link)">subscribe to our consumer product safety newsletter</a> so you can receive the latest news and information.</p>
+        <h2>{{'adminTitle' | translate:lang }}</h2>
                  <div class="col-md-6 pull-left">
-                  <div class="form-group"><label for="lkpHowAwareIncdtId" class="required"><span class="field-name">How were you made aware of the incident</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
+                  <div class="form-group"><label for="lkpHowAwareIncdtId" class="required"><span class="field-name">{{'lkpHowAwareIncdtId' | translate:lang }}</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
                          <select class="form-control" id="lkpHowAwareIncdtId" formControlName="lkpHowAwareIncdtId" required>
-                                <option value="">Select how were you made aware</option>
+                              <option label="{{'lkpHowAwareIncdtIdOption' | translate:lang }}"></option>
                                 <option *ngFor="let howAware of lstHowAwares" [value]="howAware.id">{{howAware.name}}</option>
                           </select>
                     </div>

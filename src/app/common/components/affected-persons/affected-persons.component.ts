@@ -42,8 +42,16 @@ public affectedPersonsFrmGrp:FormGroup;
 removeAffectedPerson(i:number)
 	{
 		var sectionNum=i+1;
-	//	var message="Are you sure you want to remove the affected Person " + sectionNum;	
-	var message='removeAffectedPerDialogueMsg' + sectionNum;	
+		var language = $( "html" ).attr("lang");
+		let message="";
+		if(language=="en")
+		{
+			message="Are you sure you want to remove the affected Person " + sectionNum
+		}
+		else if(language=="fr")
+		{
+			message="Êtes-vous certain de vouloir enlever les renseignements pour la personne affectée " + sectionNum
+		}
 		this.removeSectionService.removeSection(message); 
 		const control = <FormArray>this.affectedPersonsFrmGrp.get('affectedPerson');
 		$("#yesBtn").unbind('click');  

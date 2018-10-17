@@ -34,6 +34,7 @@ const l10nConfig:L10nConfig={
       {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-how-to-import-'},
       {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-how-to-save-'},
       {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-incident-'},
+      {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-measure-'},
       {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-person-contact-'},
       {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-privacy-notice-'},
       {type:ProviderType.Static, prefix:'./assets/translationLocale/locale-product-common-'},
@@ -88,16 +89,11 @@ import { VoluntaryFormService } from './voluntaryForm/services/voluntary-form.se
 import { IncidentVoluntaryService } from './voluntaryForm/services/incident-voluntary.service';
 import { RetrieveDrpDownRestServiceService } from './common/services/retrieve-drp-down-rest-service.service';
 import { RestServiceEndpointsService } from './common/services/rest-service-endpoints.service';
-import { KeycloakRestService } from './userForm/services/keycloak-rest.service';
-import { UserFormServiceService} from './userForm/services/user-form-service.service';
-import { UserFormRetrieveInformationService} from './userForm/services/user-form-retrieve-information.service';
-import { UserFormServicePostInformationService } from './userForm/services/user-form-service-post-information.service';
 import { OtherProductService } from './cosmeticForm/services/other-product.service';
 import { OtherProductsService } from './cosmeticForm/services/other-products.service';
 import { IngredientsService } from './common/services/ingredients.service';
 import { IngredientService } from './common/services/ingredient.service';
 import { CosmeticProductService } from './cosmeticForm/services/cosmetic-product.service';
-import { ProcessFormService } from './userForm/services/process-form.service';
 
 
 import { ReportComponent } from './common/components/report/report.component';
@@ -159,8 +155,6 @@ import { ManufacturerVoluntaryComponent } from './voluntaryForm/components/manuf
 import { RetailerVoluntaryComponent } from './voluntaryForm/components/retailer-voluntary/retailer-voluntary.component';
 import { ReportVoluntaryComponent } from './voluntaryForm/components/report-voluntary/report-voluntary.component';
 import { IncidentVoluntaryComponent } from './voluntaryForm/components/incident-voluntary/incident-voluntary.component';
-import { UserFormComponent } from './userForm/user-form/user-form.component';
-import { UserInfoComponent } from './userForm/components/user-info/user-info.component';
 
 const appRoutes: Routes = [ 
   { path: 'consumerEn', component: ConsumerFormComponent },
@@ -175,8 +169,7 @@ const appRoutes: Routes = [
   { path: 'cosmeticFr', component:CosmeticFormComponent },
   { path: 'voluntaryEn', component:VoluntaryFormComponent },
   { path: 'voluntaryFr', component:VoluntaryFormComponent },
-  { path: 'userEn', component:UserFormComponent},
-  { path: 'userFr', component:UserFormComponent},
+ 
  
  
 ];
@@ -248,8 +241,6 @@ const appRoutes: Routes = [
     RetailerVoluntaryComponent,
     ReportVoluntaryComponent,
     IncidentVoluntaryComponent,
-    UserFormComponent,
-    UserInfoComponent,
     
   ],
   imports: [
@@ -295,16 +286,11 @@ const appRoutes: Routes = [
     IncidentVoluntaryService,
     RetrieveDrpDownRestServiceService,
     RestServiceEndpointsService,
-    KeycloakRestService,
-    UserFormServiceService,
-    UserFormRetrieveInformationService,
-    UserFormServicePostInformationService,
     OtherProductService,
     IngredientsService,
     IngredientService,
     CosmeticProductService,
     OtherProductsService,
-    ProcessFormService
     ], 
   bootstrap: [AppComponent]
 })

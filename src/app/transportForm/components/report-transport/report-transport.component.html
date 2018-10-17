@@ -1,25 +1,17 @@
  <div class="report" [formGroup]="reportFormGrp">		 	
-   	 		<h2>Submission</h2>	
-     		<p><small>To use this form you must identify for which Health Canada Programme this submission is intended.<br>			
-			You must also have a Case Number assigned by Health Canada.</small></p>
-			<p>
-				<small>
-   	  		    - Consumer Product Safety Progamme includes cosmetics and consumer products such as toys and clothes, household appliances and furniture, sporting goods, etc.<br>
-   	  		    - Additional submissions to the Food Directorate may include documentation for novel foods, infant formula, or food additives.<br>                   
-   	  		    - The Health Products Programme includes human and veterinary drugs, biologic and genetic therapies, radio-pharmaceuticals, medical devices, and natural health products.<br>   	  		         		
-   	  		
-   	  	    </small></p>
+   	 		<h2>{{'submission' | translate:lang }}</h2>	
+     		
    	  		<div class="row">
    				<div class="col-md-6 pull-left">   				    
-    		 	    <div class="form-group"><label for="prgrmId" class="required"><span class="field-name">Programme</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label> 
+    		 	    <div class="form-group"><label for="prgrmId" class="required"><span class="field-name">{{'prgrmId' | translate:lang }}</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label> 
     					    <select class="form-control" id="prgrmId" formControlName="prgrmId" required>
-                      <option value="">Select Programme</option>
-                      <option *ngFor="let program of lstPrograms" [value]="program.id">{{program.name}}</option>
+								<option label="{{'selectProgramme' | translate:lang }}"></option>  
+                      			<option *ngFor="let program of lstPrograms" [value]="program.id">{{program.name}}</option>
                   </select>                 				
 					</div>
 				</div>
               <div class="col-md-6 pull-left">
-                <div  class="form-group"><label for="report_caseNo" class="required"><span class="field-name">Case Number</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
+                <div  class="form-group"><label for="report_caseNo" class="required"><span class="field-name">{{'caseNumber' | translate:lang }}</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
                          <input  class="form-control" id="report_caseNo" formControlName="caseNo" type="text"
                                     maxlength="11" onkeypress="return noEnter(event)"/>
                     </div>

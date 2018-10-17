@@ -23,9 +23,7 @@ formname:string;
 		{  
 			var language = $( "html" ).attr("lang");
 			this.locale.setCurrentLanguage(language);
-			console.log("ss" +window.location.href);
 			var hrefUrl=location.search;
-			console.log("ss" +hrefUrl);
 			var urlParamsArry =hrefUrl.replace("?","").split("&");
 			var paramArry;
 			var paramName="";
@@ -38,12 +36,9 @@ formname:string;
 			for(var i=0;i<urlParamsArry.length;i++)
 			{
 				paramArry=urlParamsArry[i].split("=");
-				console.log("paramArry" + paramArry);
 				if(paramArry[0]=="formNameP")
 				{
 					paramName=paramArry[1];
-					console.log("formname" + paramName);
-				//	break;
 				}
 				else if(paramArry[0]=="uuid")
 				{
@@ -63,18 +58,7 @@ formname:string;
 				}
 				
 			}
-			console.log("formName12" +paramName);
-			// this.route.queryParams.forEach((params: Params) => {
-        		//this.formName= params['formName'];
-			//	console.log("params" + JSON.stringify(params));
-			//	console.log("haa1"+ params['formname']);
-			//		this.formname= params['formname'];
- 			//	});
-			//var test="/industryEn";
-			//console.log("haa"+this.formName);
-			formNameP="'/" + paramName+ "'";
-			console.log("formName" +paramName);
-			
+			formNameP="'/" + paramName+ "'";			
 			this.router.navigate([eval(formNameP)],{queryParams:{formNameP:paramName,uuid:uuid,formId:formId,trackId:trackId,lang:lang}});		
 		} 
 }

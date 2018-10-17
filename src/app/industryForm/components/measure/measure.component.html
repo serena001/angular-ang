@@ -1,26 +1,26 @@
 <div  [formGroup]="measureFrmGrp">
        <div class="row">
-         <h2>Measures and other Products </h2>
+         <h2>{{'measureTitle' | translate:lang }}</h2>
 
-         <div class="form-group"><label for="correctiveMeasureRquiredFlg" class="required"><span class="field-name">In your opinion, are corrective measures required</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
+         <div class="form-group"><label for="correctiveMeasureRquiredFlg" class="required"><span class="field-name">{{'correctiveMeasureRquiredFlg' | translate:lang }}</span> <strong class="required">({{ 'required' | translate:lang }})</strong></label>
                          <select class="form-control" id="correctiveMeasureRquiredFlg" formControlName="correctiveMeasureRquiredFlg" required>
-                               <option value="">Select Yes or No</option>
+                               <option label="{{'selectOption' | translate:lang }}"></option>
                                 <option *ngFor="let measure of lstCorrectiveMeasure" [value]="measure">{{measure}}</option>
                           </select>
                     </div>
             
             <div class="row">
                  <div class="col-sm-10">
-                    <div class="form-group"><label for="correctiveMeasureExplanation"><span class="field-name">Enter explanation of why corrective measures are not required OR enter details of corrective measures</span></label><br>
-                          <small>Characters remaining: <span></span></small>
+                    <div class="form-group"><label for="correctiveMeasureExplanation"><span class="field-name">{{'correctiveMeasureExplanation' | translate:lang }}</span></label><br>
+                          <small>{{'charactersRemain' | translate:lang }}<span></span></small>
                           <textarea class="form-control" id="correctiveMeasureExplanation" name="correctiveMeasureExplanation" formControlName="correctiveMeasureExplanation" ng-trim="false"  rows="5" cols="100" maxlength="2000"></textarea>
                      </div>
                  </div>
              </div>
              <div class="row">
              	   <div class="col-sm-10">
-                       <div class="form-group"><label for="otherProductsIncident"><span class="field-name">Identify any other products that you manufacture or import that to your knowledge could be involved in a similar incident</span></label><br>
-                            <small>Characters remaining: <span></span></small>
+                       <div class="form-group"><label for="otherProductsIncident"><span class="field-name">{{'otherProductsIncident' | translate:lang }}</span></label><br>
+                            <small>{{'charactersRemain' | translate:lang }}<span></span></small>
                             <textarea class="form-control" id="otherProductsIncident" name="otherProductsIncident" formControlName="otherProductsIncident" ng-trim="false"  rows="5" cols="100" maxlength="1500"></textarea>
                        </div>
                     </div>

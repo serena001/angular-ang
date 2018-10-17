@@ -1,5 +1,7 @@
 {
     "submitterTitle":"Who is reporting - Section 2",
     "lkpReltnshpAffctdPrsnId":"Relationship to injured / involved person",
-    "lkpReltnshpAffctdPrsnIdOption":"Select Relationship to injured / involved persons"
+    "lkpReltnshpAffctdPrsnIdOption":"Select Relationship to injured / involved persons",
+    "whoAreYou":"Who are you",
+    "titleWithinOrganization":"Position"
  }

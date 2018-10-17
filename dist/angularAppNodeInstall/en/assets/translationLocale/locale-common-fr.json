@@ -5,5 +5,6 @@
     "lstStateOption":"Sélectionnez un état",
     "charactersRemain":"Caractères restants :",
     "yesMsg":"oui",
-    "noMsg":"non"
+    "noMsg":"non",
+    "warning":"Message"
 }

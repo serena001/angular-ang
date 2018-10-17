@@ -38,7 +38,17 @@ showError:any=true;
 		let files = [].slice.call(event.target.files);
 		const control = <FormArray>this.myForm.get('documents.document');
 		var errorMessage1="The document(s) was not attached ";
-		var successMsg="Confirmation: The document(s) selected was attached successfully to the online form:";
+		var language = $( "html" ).attr("lang");
+		var successMsg="";
+		if(language=="en")
+		{
+			successMsg="Confirmation: The document(s) selected was attached successfully to the online form:";
+		}
+		else if(language=="fr")
+		{
+			successMsg="Confirmation: Le document sélectionné a été ajouté avec succès au formulaire en ligne:";
+		}
+	
 			if (files && files.length) 
 			{
 				var fileMessage = "Confirmation";

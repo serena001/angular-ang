@@ -1,20 +1,19 @@
   
     <div class="row" [formGroup]="whereGotPrdctFormGrp">
-       <div id="section6"><h2>Where you got the Product </h2></div>
-            <p><small>If you are not the manufacturer or importer, you must notify the person from whom you received the product, of this incident, within 2 days. <abbr title="Canada Consumer Product Safety Act ">CCPSA</abbr> 14(2).</small></p>
-
+       <div id="section6"><h2>{{'whereGotPrdctTitle' | translate:lang }} </h2></div>
+    
             <div class="row">
                 <div class="col-md-6 pull-left">
-                    <div class="form-group"><label for="acquiredProductDate{{sectionName}}{{formName}}{{index}}"><span class="field-name">When was the product acquired (may be approximate) </span><span class="datepicker-format">(<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+                    <div class="form-group"><label for="acquiredProductDate{{sectionName}}{{formName}}{{index}}"><span class="field-name">{{'acquiredProductDate' | translate:lang }} </span><span class="datepicker-format">(<abbr title="{{'abbrDate' | translate:lang }}">{{'DateFormat' | translate:lang }}</abbr>)</span></label>
                          <input class="form-control" id="acquiredProductDate{{sectionName}}{{formName}}{{index}}" name="acquiredProductDate{{sectionName}}{{formName}}{{index}}" 
                                 formControlName="acquiredProductDate" hcform-datepicker 
                                 type="date"  data-rule-dateISO="true"  onkeypress="return noEnter(event)"/>
                     </div>
                 </div>
                 <div class="col-md-6 pull-right">
-                    <div class="form-group"><label for="lkpContactContextId{{sectionName}}{{formName}}{{index}}"><span class="field-name">Relationship to injured / involved person</span></label>
+                    <div class="form-group"><label for="lkpContactContextId{{sectionName}}{{formName}}{{index}}"><span class="field-name">{{'contactContextId' | translate:lang }}</span></label>
                           <select class="form-control" id="lkpContactContextId{{sectionName}}{{formName}}{{index}}" name="lkpContactContextId{{sectionName}}{{formName}}{{index}}" formControlName="lkpContactContextId">
-                                  <option value="">Select from whom you got the product</option>
+                                    <option label="{{ 'lkpContactContextIdOption' | translate:lang }}"></option>    
                                   <option *ngFor="let productFromWhom of  lstProductFromWhom" [value]="productFromWhom.id">{{productFromWhom.name}}</option>
                           </select>                   
                     </div>
@@ -23,26 +22,26 @@
             <app-business-contact [group]="whereGotPrdctFormGrp" [sectionName]=sectionName [index]=index [formName]=formName></app-business-contact>
             <div class="row">
                     <div class="col-md-6 pull-left">
-                        <div class="form-group"><label for="quantityOfProduct{{sectionName}}{{formName}}{{index}}"><span class="field-name">Quantity of Product involved</span></label>
+                        <div class="form-group"><label for="quantityOfProduct{{sectionName}}{{formName}}{{index}}"><span class="field-name">{{'quantityOfProduct' | translate:lang }}</span></label>
                              <input class="form-control" type="text" id="quantityOfProduct{{sectionName}}{{formName}}{{index}}" name="quantityOfProduct" formControlName="quantityOfProduct"  maxlength="20" onkeypress="return noEnter(event)"/>
                        </div>
                     </div>
                     <div class="col-md-6 pull-right">
-                        <div class="form-group"><label for="countryOfOrigin"><span class="field-name">Country of Origin</span></label>
+                        <div class="form-group"><label for="countryOfOrigin"><span class="field-name">{{'countryOfOrigin' | translate:lang }}</span></label>
                              <input class="form-control" type="text" id="countryOfOrigin" name="countryOfOrigin{{sectionName}}{{formName}}{{index}}" formControlName="countryOfOrigin"  maxlength="20" onkeypress="return noEnter(event)"/>
                         </div>
                     </div>
             </div>
             <div class="row">
                 <div class="col-md-6 pull-left">
-                    <div class="form-group"><label for="productionBeginDate{{sectionName}}{{formName}}{{index}}"><span class="field-name">Production / Importation began </span><span class="datepicker-format">(<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+                    <div class="form-group"><label for="productionBeginDate{{sectionName}}{{formName}}{{index}}"><span class="field-name">{{'productionBeginDate' | translate:lang }}</span><span class="datepicker-format">(<abbr title="{{'abbrDate' | translate:lang }}">{{'DateFormat' | translate:lang }}</abbr>)</span></label>
                          <input class="form-control" id="productionBeginDate{{sectionName}}{{formName}}{{index}}" name="productionBeginDate{{sectionName}}{{formName}}{{index}}" 
                                 formControlName="productionBeginDate" hcform-datepicker
                                 type="date"  data-rule-dateISO="true"  onkeypress="return noEnter(event)"/>
                     </div>
                 </div>
                 <div class="col-md-6 pull-right">
-                    <div class="form-group"><label for="productionEndDate{{sectionName}}{{formName}}{{index}}"><span class="field-name">Production / Importation ended </span><span class="datepicker-format">(<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+                    <div class="form-group"><label for="productionEndDate{{sectionName}}{{formName}}{{index}}"><span class="field-name">{{'productionBeginDate' | translate:lang }}</span><span class="datepicker-format">(<abbr title="{{'abbrDate' | translate:lang }}">{{'DateFormat' | translate:lang }}</abbr>)</span></label>
                          <input class="form-control" id="productionEndDate{{sectionName}}{{formName}}{{index}}" name="productionEndDate{{sectionName}}{{formName}}{{index}}" 
                                 formControlName="productionEndDate" hcform-datepicker 
                                 type="date"  data-rule-dateISO="true"  onkeypress="return noEnter(event)"/>
@@ -51,14 +50,14 @@
             </div>
             <div class="row">
                 <div class="col-md-6 pull-left">
-                    <div class="form-group"><label for="distributionBeginDate{{sectionName}}{{formName}}{{index}}"><span class="field-name">Distribution began </span><span class="datepicker-format">(<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+                    <div class="form-group"><label for="distributionBeginDate{{sectionName}}{{formName}}{{index}}"><span class="field-name">{{'distributionBeginDate' | translate:lang }}</span><span class="datepicker-format">(<abbr title="{{'abbrDate' | translate:lang }}">{{'DateFormat' | translate:lang }}</abbr>)</span></label>
                          <input class="form-control" id="distributionBeginDate{{sectionName}}{{formName}}{{index}}" name="distributionBeginDate{{sectionName}}{{formName}}{{index}}" 
                                 formControlName="distributionBeginDate" hcform-datepicker 
                                 type="date"  data-rule-dateISO="true"  onkeypress="return noEnter(event)"/>
                     </div>
                 </div>
                 <div class="col-md-6 pull-right">
-                    <div class="form-group"><label for="distributionEndDate{{sectionName}}{{formName}}{{index}}"><span class="field-name">Distribution ended </span><span class="datepicker-format">(<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+                    <div class="form-group"><label for="distributionEndDate{{sectionName}}{{formName}}{{index}}"><span class="field-name">{{'distributionEndDate' | translate:lang }}</span><span class="datepicker-format">(<abbr title="{{'abbrDate' | translate:lang }}">{{'DateFormat' | translate:lang }}</abbr>)</span></label>
                          <input class="form-control" id="distributionEndDate{{sectionName}}{{formName}}{{index}}" name="distributionEndDate{{sectionName}}{{formName}}{{index}}" 
                                 formControlName="distributionEndDate" hcform-datepicker 
                                 type="date"  data-rule-dateISO="true"  onkeypress="return noEnter(event)"/>
@@ -67,14 +66,14 @@
             </div>
             <div class="row">
                 <div class="col-md-6 pull-left">
-                    <div class="form-group"><label for="retailSaleBeginDate{{sectionName}}{{formName}}{{index}}"><span class="field-name">Retail Sale began </span><span class="datepicker-format">(<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+                    <div class="form-group"><label for="retailSaleBeginDate{{sectionName}}{{formName}}{{index}}"><span class="field-name">{{'retailSaleBeginDate' | translate:lang }}</span><span class="datepicker-format">(<abbr title="{{'abbrDate' | translate:lang }}">{{'DateFormat' | translate:lang }}</abbr>)</span></label>
                          <input class="form-control" id="retailSaleBeginDate{{sectionName}}{{formName}}{{index}}" name="retailSaleBeginDate{{sectionName}}{{formName}}{{index}}" 
                                 formControlName="retailSaleBeginDate" hcform-datepicker 
                                 type="date"  data-rule-dateISO="true"  onkeypress="return noEnter(event)"/>
                     </div>
                 </div>
                 <div class="col-md-6 pull-right">
-                    <div class="form-group"><label for="retailSaleEndDate{{sectionName}}{{formName}}{{index}}"><span class="field-name">Retail Sale ended </span><span class="datepicker-format">(<abbr title="Four digits year, dash, two digits month, dash, two digits day">YYYY-MM-DD</abbr>)</span></label>
+                    <div class="form-group"><label for="retailSaleEndDate{{sectionName}}{{formName}}{{index}}"><span class="field-name">{{'retailSaleEndDate' | translate:lang }}</span><span class="datepicker-format">(<abbr title="{{'abbrDate' | translate:lang }}">{{'DateFormat' | translate:lang }}</abbr>)</span></label>
                          <input class="form-control" id="retailSaleEndDate{{sectionName}}{{formName}}{{index}}" name="retailSaleEndDate{{sectionName}}{{formName}}{{index}}" 
                                 formControlName="retailSaleEndDate" hcform-datepicker 
                                 type="date"   data-rule-dateISO="true"  onkeypress="return noEnter(event)"/>

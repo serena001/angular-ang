@@ -29,9 +29,16 @@ public documentsFrmGrp:FormGroup;
 	removeDocument(i:number)
 	{ 
     var sectionNum=i+1;
-    var removeDialMsg='removeDocDialogueMsg';
-    //var message="Are you sure you want to remove the document " + sectionNum;	
-    var message=removeDialMsg + sectionNum;	
+    var language = $( "html" ).attr("lang"); 
+    let message="";
+    if(language=="en")
+		{
+			message="Are you sure you want to remove Document# " + sectionNum
+		}
+		else if(language=="fr")
+		{
+			message="Êtes-vous certain de vouloir enlever les renseignements pour le document #  " + sectionNum
+		}
 		this.removeSectionService.removeSection(message); 
 		const control = <FormArray>this.documentsFrmGrp.get('document');
 		$("#yesBtn").unbind('click');  

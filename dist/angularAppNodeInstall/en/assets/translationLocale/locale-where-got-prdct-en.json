@@ -2,5 +2,15 @@
     "whereGotPrdctTitle":"Where you got the Product - Section 6",
     "acquiredProductDate":"When was the product acquired (may be approximate)",
     "contactContextId":"Relationship to injured / involved person",
-    "lkpContactContextIdOption":"Select from whom you got the product"
+    "lkpContactContextIdOption":"Select from whom you got the product",
+    "quantityOfProduct":"Quantity of Product involved",
+    "countryOfOrigin":"Country of Origin",
+    "productionBeginDate":"Production / Importation began",
+    "productionEndDate":"Production / Importation ended",
+    "DateFormat":"YYYY-MM-DD",   
+    "abbrDate":"Four digits year, dash, two digits month, dash, two digits day",
+    "distributionBeginDate":"Distribution began",
+    "distributionEndDate":"Distribution ended",
+    "retailSaleBeginDate":"Retail Sale began",
+    "retailSaleEndDate":"Retail Sale ended"
  }
