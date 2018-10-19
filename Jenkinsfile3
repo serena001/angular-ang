@@ -3,7 +3,7 @@ node{
     script {
         System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.HEARTBEAT_CHECK_INTERVAL", "8000");
     }
-      stage('Git Repository'){
+   /**   stage('Git Repository'){
             git branch:'master',
             credentialsId:'serena001e78e32e3bab14b50b22e8666d664e021',
             url:'https://github.com/serena001/angular-ang.git'
@@ -15,5 +15,13 @@ node{
             sh 'npm install -g @angular/cli'
             sh 'ng build --prod  --output-path=dist/angularAppNodeInstall/fr/ --index=src/fr/index.html --deploy-url=./'
             sh 'ng build --prod  --output-path=dist/angularAppNodeInstall/en/ --index=src/en/index.html --deploy-url=./'
+       }**/
+       stage('Docker')
+       {
+            def imageName = "smkm001/angularAng:${env.BUILD_ID}"
+            def dockerFileDir = './'
+            def customImage=docker.build("${imageName}","${dockerFileDir}")
+             customImage.push()
+             sh "docker rmi ${imageName}"
        }
 }
