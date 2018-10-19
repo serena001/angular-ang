@@ -3,12 +3,12 @@ node{
     script {
         System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.HEARTBEAT_CHECK_INTERVAL", "8000");
     }
-   /**   stage('Git Repository'){
+      stage('Git Repository'){
             git branch:'master',
             credentialsId:'serena001e78e32e3bab14b50b22e8666d664e021',
             url:'https://github.com/serena001/angular-ang.git'
        }
-       stage('Node and npm install'){
+    /**   stage('Node and npm install'){
            env.NODEJS_HOME = "${tool 'nodeJS10'}"
            env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
             sh "npm install"
