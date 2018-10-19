@@ -18,7 +18,7 @@ node{
        }**/
        stage('Docker')
        {
-            def imageName = "smkm001/angularAng:${env.BUILD_ID}"
+            def imageName = "smkm001/angularang:${env.BUILD_ID}"
             def dockerFileDir = './'
             def customImage=docker.build("${imageName}","${dockerFileDir}")
              customImage.push()
