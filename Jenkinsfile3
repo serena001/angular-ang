@@ -22,6 +22,6 @@ node{
             def dockerFileDir = './'
             def customImage=docker.build("${imageName}","${dockerFileDir}")
              customImage.push()
-             sh "docker rmi ${imageName}"
+            // sh "docker rmi ${imageName}"
        }
 }
