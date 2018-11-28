@@ -1,8 +1,0 @@
-{
-    "incidentTitle":"Incident - Section 3",
-    "subParagraph1":"You can report up to 10 affected persons. Please enter the person affected the most first",
-    "subParagraph2":"Use one sub-form per person. Click on the 'Add a Person' button to add each additional person. Click on the 'Remove Person' button to remove a person.",
-    "numberAffectedPersons":"Number of people affected (only accepts a number between 0 and 999)",
-    "incidentDescription":"Describe the Incident"
-}
-

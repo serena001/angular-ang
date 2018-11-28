@@ -1,9 +1,0 @@
-{
-"titleHowToImport" : "How to view/edit your previous Incident Report for Consumer", 
-"panelTitleHowToImport" : "Viewing or editing a previously saved Incident Report for Consumer",
-"howToImportBullet1" : "From a blank form webpage (use F5/refresh to clear current form and refresh the page)",
-"howToImportBullet2" : "Use 'Browse/Choose File' button on webpage to select previously saved .hcxs file.",
-"howToImportBullet3" : "Directly below, click on the 'Upload Information' button.",
-"howToImportBullet4" : "Previously saved information will be loaded into form.",
-"howToImportBullet5" : "Edit, save and submit the information as desired."
-}

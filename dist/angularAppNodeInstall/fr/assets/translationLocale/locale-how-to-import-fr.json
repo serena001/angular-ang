@@ -1,9 +1,0 @@
-{
-"titleHowToImport" : "Comment consulter ou modifier un Rapport d'incident pour consommateur préalablement sauvegardé - Section 11", 
-"panelTitleHowToImport" : "Consulter ou modifier les renseignements d'un Rapport d'incident pour consommateur préalablement sauvegardé",
-"howToImportBullet1" : "À partir d'un formulaire vierge de la page Web (tapez F5 ou Actualiser pour vider le formulaire et rafraîchir la page).",
-"howToImportBullet2" : "À l'aide du bouton « Parcourir/Choisir un fichier » sur la page Web, choisissez la version déjà sauvegardée du fichier .hcxs.",
-"howToImportBullet3" : "Directement en dessous, cliquez sur le bouton « Télécharger les renseignements ».",
-"howToImportBullet4" : "Les renseignements déjà sauvegardés seront téléchargés dans le formulaire.",
-"howToImportBullet5" : "Modifiez, sauvegardez et soumettez les renseignements au besoin."
-}

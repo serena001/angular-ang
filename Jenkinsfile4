@@ -18,4 +18,8 @@ node{
              customImage.push()
             // sh "docker rmi ${imageName}"
        }
+       stage('Publish to NPM Repository')
+       {
+           sh "npm publish --registry http://localhost:4873"
+       }
 }

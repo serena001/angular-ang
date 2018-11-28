@@ -14,7 +14,7 @@ endpointDefaults=
        "drpDownLkpIncidentTypeIds": "http://localhost:8083/lkpIncidentTypeIds", 
        "drpDownLkpInfoResourceTypeIds": "http://localhost:8083/lkpInfoResourceTypeIds", 
        "drpDownLkpInjuryTypeIds": "http://localhost:8083/lkpInjuryTypeIds", 
-       "drpDownLkpPrivacyNoticeCbiIds": "http://localhost:8083/lkpPrivacyNoticeCbiIdsIds", 
+       "drpDownLkpPrivacyNoticeCbiIds": "http://localhost:8083/lkpPrivacyNoticeCbiIds", 
        "drpDownLkpPurposeIds": "http://localhost:8083/lkpPurposeIds", 
       "drpDownLkpReltnshpAffctdPrsnIds": "http://localhost:8083/lkpReltnshpAffctdPrsnIds", 
       "drpDownLkpTreatmentTypeIds": "http://localhost:8083/lkpTreatmentTypeIds", 

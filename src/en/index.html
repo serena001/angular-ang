@@ -20,11 +20,11 @@
 		<meta name="dcterms.modified" title="W3CDTF" content="2016-08-31" />		
 		<!-- Meta data--> 
 		<!-- Load closure template scripts -->
-  	<script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_22/cdts/compiled/soyutils.js"></script>
+ <!-- 	<script type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_22/cdts/compiled/soyutils.js"></script>
 <script id="template" type="text/javascript" src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_22/cdts/compiled/wet-en.js"></script>           
-
-<!--<script type="text/javascript" src="../cdts/compiled/soyutils.js"></script>
-<script type="text/javascript" src="../cdts/compiled/wet-en.js"></script>-->
+-->
+<script type="text/javascript" src="../cdts/compiled/soyutils.js"></script>
+<script type="text/javascript" src="../cdts/compiled/wet-en.js"></script>
 
 		<noscript>
 			<!-- Write closure fall-back static file -->
@@ -33,12 +33,12 @@
 		</noscript>
 		<!-- Write closure template -->
 		<script type="text/javascript">
-			document.write(wet.builder.refTop({
-				cdnEnv: "prod"
-			}));
 		/*	document.write(wet.builder.refTop({
+				cdnEnv: "prod"
+			}));*/
+			document.write(wet.builder.refTop({
             	localPath: "../"
-        	}));*/
+        	}));
 
 		
 
@@ -88,7 +88,7 @@
 					hrefUrl=hrefUrl.replace("/en/","/fr/");
 
 				}
-							defTop.outerHTML = wet.builder.top({
+			/*				defTop.outerHTML = wet.builder.top({
 				cdnEnv: "prod",
 				lngLinks: [{
 					lang: langVar,
@@ -103,9 +103,9 @@
 					acronym: acronymVar,
 					href: hrefVar
 				}]
-			});
+			});*/
 
-			/*		defTop.outerHTML = wet.builder.top({
+					defTop.outerHTML = wet.builder.top({
 				cdnEnv: "prod",
 				lngLinks: [{
 					lang: langVar,
@@ -121,7 +121,7 @@
 					href: hrefVar
 				}],
 				localPath: "../"
-			});*/
+			});
 				
 		
 				
@@ -142,16 +142,16 @@
 			</div>
 			<!-- Write closure template -->
 			<script type="text/javascript">
-				var defPreFooter = document.getElementById("def-preFooter");
+			/*	var defPreFooter = document.getElementById("def-preFooter");
 				defPreFooter.outerHTML = wet.builder.preFooter({
 					cdnEnv: "prod",
 					dateModified: "2018-07-16"
-				});
-			/*	var defPreFooter = document.getElementById("def-preFooter");
+				});*/
+				var defPreFooter = document.getElementById("def-preFooter");
             	defPreFooter.outerHTML = wet.builder.preFooter({
                 localPath: "../",
 				dateModified: "2016-12-08"
-				});	*/		
+				});			
 			
 			</script>
 		</main>
@@ -163,25 +163,25 @@
 		</div>
 		<!-- Write closure template -->
 		<script type="text/javascript">
-			var defFooter = document.getElementById("def-footer");
+		/*	var defFooter = document.getElementById("def-footer");
 			defFooter.outerHTML = wet.builder.footer({
 				cdnEnv: "prod"
-			});
- 		/*	var defFooter = document.getElementById("def-footer");
+			});*/
+ 			var defFooter = document.getElementById("def-footer");
             defFooter.outerHTML = wet.builder.footer({
                 localPath: "../"
-            });*/
+            });
 		
 			
 		</script>
 		<!-- Write closure template -->
 		<script type="text/javascript">
-			document.write(wet.builder.refFooter({
-				cdnEnv: "prod"
-				}));
 		/*	document.write(wet.builder.refFooter({
+				cdnEnv: "prod"
+				}));*/
+			document.write(wet.builder.refFooter({
                 localPath: "../"
-            }));*/
+            }));
 		
 
 		
