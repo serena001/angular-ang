@@ -20,6 +20,8 @@ node{
        }
        stage('Publish to NPM Repository')
        {
+              env.NODEJS_HOME = "${tool 'nodeJS10'}"
+           env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
            sh "npm publish --registry http://localhost:4873"
        }
 }
