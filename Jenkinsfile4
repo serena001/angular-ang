@@ -23,6 +23,6 @@ node{
               env.NODEJS_HOME = "${tool 'nodeJS10'}"
            env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
            sh "npm set registry http://localhost:4873"
-           sh "npm publish --registry http://localhost:4873"
+           sh "npm publish"
        }
 }
