@@ -15,7 +15,7 @@ node{
             def imageName = "smkm001/angularang:${env.BUILD_ID}"
             def dockerFileDir = './'
             def customImage=docker.build("${imageName}","${dockerFileDir}")
-             customImage.push()
+        //     customImage.push()
             // sh "docker rmi ${imageName}"
        }
        stage('Publish to NPM Repository')
