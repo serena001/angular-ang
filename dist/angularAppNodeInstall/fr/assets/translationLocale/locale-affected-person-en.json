@@ -1,0 +1,18 @@
+{
+    "affectedPersonTitle":"Affected Person",
+    "dateOfIncident":"Date of the Incident (YYYY-MM-DD)",
+    "gender":"Gender",
+    "ageRange":"Age Range",
+    "incidentType":"Incident Type",
+    "injuryType":"Injury Type",
+    "treatment":"Treatment",
+    "bodyPart":"Body Part",
+    "subParagraph1":"You can report up to 10 affected persons. Please enter the person affected the most first",
+    "subParagraph2":"Use one sub-form per person. Click on the 'Add a Person' button to add each additional person. Click on the 'Remove Person' button to remove a person.",
+    "lkpGenderIdOption":"Select Gender",
+    "lstAgeRangeOption":"Select an age Range",
+    "lkpIncidentTypeIdOption":"Select Incident Type",
+    "lkpInjuryTypeIdOption":"Select Injury Type",
+    "lkpTreatmentTypeIdOption":"Select Treatment Type",
+    "lkpBodyPartIdOption":"Select Body Part"
+}

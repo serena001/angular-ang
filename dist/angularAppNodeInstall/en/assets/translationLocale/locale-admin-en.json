@@ -1,0 +1,9 @@
+{
+    "adminTitle":"Administrative information - Section 8",
+    "lkpHowAwareIncdtId":"How did you become aware of Consumer Product Incident Reports ",
+    "lkpReportedIncidentId":"Have you reported this incident to the manufacturer or retail store",
+    "lkpHowAwareIncdtIdOption":"Select How did you became aware",
+    "lkpReportedIncidentIdOption":"Select Have you reported this incident"
+
+ 
+}

@@ -1,0 +1,8 @@
+{
+    "incidentTitle":"Incident - Section 3",
+    "subParagraph1":"Vous pouvez rapporter jusqu'à 10 personnes affectées. Veuillez entrer en premier la personne la plus affectée.",
+    "subParagraph2":"Un sous-formulaire est utilisé par personne. Cliquez sur le bouton << Ajouter une personne >> pour ajouter une personne. Cliquez sur le bouton << Enlever personne >> pour enlever une personne.",
+    "numberAffectedPersons":"Nombre de personnes affectées (accepte uniquement un nombre entre 0 et 999)",
+    "incidentDescription":"Description de l'incident"
+}
+

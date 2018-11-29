@@ -1,0 +1,13 @@
+{
+     "reportType" : "Report Type",
+ "productType" : "Product Type",
+  "caseNumber" : "Case Number" ,
+ "reportTitle"  :  "Report - Section 1",
+"selectProductType"  :  "Select Product Type",
+"selectReportType"  :  "Select Report Type",
+"selectPurposeOfReport" : "Select Purpose of Report",
+"purposeOfReport":"Purpose of Report",
+"submission":"Submission",
+"selectProgramme":"Select Programme",
+"prgrmId":"Programme"
+}

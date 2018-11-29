@@ -1,0 +1,15 @@
+{
+"titleDocuments" : "Documents et images - Section 7",
+"titlePanel" :"Documents",
+"attachDoc" : "Ajouter un document",
+"attachDocBullet1" :"Cliquez sur le bouton « Parcourir » ou « Sélect. fichiers » pour sélectionner un ou plusieurs documents.",
+"attachDocBullet2" : "Veuillez nommer le document de même que sélectionner un type de document du menu déroulant.",
+"docSize" : "Taille du document :",
+"docSizeBullet1" : "La taille cumulative des documents ajoutés ne doit pas excéder 70 Mo.",
+"docAccept" : "Documents qui ne sont pas acceptés :",
+"docAcceptBullet1" : "Certains formats de fichiers tels que .zip et .exe ne peuvent pas être ajoutés au formulaire en ligne.",
+"docRemove" : "Enlever un document :",
+"docRemoveBullet1" : "Cliquez sur le bouton « Enlever document » afin de retirer un document du formulaire en ligne.",
+"docRemoveBullet2" : "Pour retirer tous les documents à la fois, cliquez sur le bouton « Enlever tous les documents ».",
+"uploadButton" : "Sélectionnez un ou plusieurs documents"
+}

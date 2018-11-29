@@ -1,0 +1,7 @@
+{
+    "docsTitle":"DOCUMENT",
+    "removeDocBttn": "remove document",
+    "removeAllDocBttn":"enlever tous les documents",
+    "removeDocDialogueMsg":"Are you sure you want to remove the document",
+    "removeAllDocDialogueMsg":"Are you sure you want to remove All Documents?"
+}
