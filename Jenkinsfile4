@@ -2,6 +2,8 @@ node{
       stage('Git Repository'){
           checkout scm
        }
+        env.NODEJS_HOME = "${tool 'nodeJS10'}"
+        env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
     /*   stage('Node and npm install'){
            env.NODEJS_HOME = "${tool 'nodeJS10'}"
            env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
@@ -10,6 +12,10 @@ node{
             sh 'ng build --prod  --output-path=dist/angularAppNodeInstall/fr/ --index=src/fr/index.html --deploy-url=./'
             sh 'ng build --prod  --output-path=dist/angularAppNodeInstall/en/ --index=src/en/index.html --deploy-url=./'
        }*/
+        stage('Publish to NPM Repository')
+       {
+           sh "npm publish --registry http://localhost:4873"
+       }
        stage('Docker')
        {
             def imageName = "smkm001/angularang:${env.BUILD_ID}"
@@ -18,11 +24,5 @@ node{
         //     customImage.push()
             // sh "docker rmi ${imageName}"
        }
-       stage('Publish to NPM Repository')
-       {
-              env.NODEJS_HOME = "${tool 'nodeJS10'}"
-           env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
-           sh "npm set registry http://localhost:4873"
-           sh "npm publish"
-       }
+      
 }
