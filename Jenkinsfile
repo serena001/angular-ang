@@ -1,6 +1,7 @@
-@Library('deployment') _
 def archiveArtifactConfig;
+def deploymentConfig;
 def emailConfig;
+def deployment;
 
 pipeline{
 	agent any
@@ -22,13 +23,14 @@ pipeline{
 				{
            env.NODEJS_HOME = "${tool 'nodeJS10'}"
             env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
-				    deploymentConfig=readJSON(file:"src/main/resources/deploymentConfig.json")
-            archiveArtifactConfig=deploymentConfig.archiveArtifact
+			deploymentConfig=readJSON(file:"deploymentConfig.json")
+			deployment=load("deployment2.groovy")
+            //archiveArtifactConfig=deploymentConfig.archiveArtifact
             emailConfig=deploymentConfig.email
 				}
 			}
 		}
-    stage('Package and Build the application')
+    /**stage('Package and Build the application')
 		{
 			steps
 			{
@@ -41,13 +43,14 @@ pipeline{
 
 				}
 			}
-		}
+		}**/
     stage('Publish to NPM Repository')
 		{
 			steps
 			{
 				script
 				{
+					sh "npm adduser --registry http://localhost:4873"
           sh "npm publish --registry http://localhost:4873"
 				}
 			}
@@ -61,8 +64,8 @@ pipeline{
             def imageName = "smkm001/angularang:${env.BUILD_ID}"
             def dockerFileDir = './'
             def customImage=docker.build("${imageName}","${dockerFileDir}")
-            customImage.push()
-            sh "docker rmi ${imageName}"
+            //customImage.push()
+            //sh "docker rmi ${imageName}"
 				}
 			}
 		}
@@ -82,7 +85,7 @@ pipeline{
 			script{
 				echo "Process is successful"
 				deployment.sendEmail(emailConfig)
-				deployment.archiveArtifact(archiveConfig)
+				//deployment.archiveArtifact(archiveConfig)
 			}
 		}
 		unstable{

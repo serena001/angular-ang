@@ -1,0 +1,37 @@
+{
+	"archiveArtifact":
+	{
+		"artifacts":"target/*.jar",
+		"fingerprint":true,
+		"OnlyIfSuccessful":true
+	},
+	"artifactoryPromotion":
+	{
+		"targetRepo":"libs-release-local",
+		"sourceRepo":"libs-staging-local",
+		"status":"Released",
+		"copy":true,
+		"failFast":true
+	},
+	"artifactoryDeploy":
+	{
+		"releaseLibRes":"libs-release",
+		"snapshotLibRes":"libs-snapshot",
+		"releaseLibDep":"libs-staging-local",
+		"snapshotLibDep":"libs-snapshot-local"		
+	},
+	"email":
+	{
+		"subject":"Jenkins deployment to Artifactory",
+		"to":"mgchow5007@gmail.com",
+		"body":"groovy-html3.template",
+		"from":"jenkins",
+		"mimeType":"text/html"
+	},
+	"project":
+	{
+		"configFilename":"pom.xml",
+		"searchValue":"release"
+	}
+	
+}
